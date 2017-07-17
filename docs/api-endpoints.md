@@ -24,4 +24,9 @@
 |Contests|'POST'|'/api/contests'|Create Contest|
 |Contests|'DELETE'|'/api/contest/:id'|Destroy Contest|
 | | | | |
-|Teams|'GET'|'/api/teams'|Get Teams by W
+|Teams|'GET'|'/api/teams'|Get Teams by Schedule/Filter|
+| | | | |
+|Schedule|'GET'|'/api/schedule'|Get Schedule for Contest|
+| | | | |
+|Entries|'GET'|'/api/users/:id/entries'|Get Entries by User|
+|Entries|'DELETE'|'/api/users/:id/entries/:id'|Delete Entry|
