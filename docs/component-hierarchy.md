@@ -12,15 +12,24 @@ Auth Form Container will hold the form for `Sign In` and `Sign Out`.
   - Dashboard
   - Lobby
   - Create Contest (form)
-  - Profile
+  - ProfileComponent
+    - Profile
+    - Dropdown to Log Out
 
 The Nav Container has links to dashboard, lobby and create contest form.
+
+### CreateFormContainer
+- CreateForm Component (takes create action)
+
+The Create Form Container will render the form to submit a new contest
 
 ### LobbyIndexContainer
 - LobbyComponent
   - Full Lobby List
   - Filter Buttons
   - Enter Contest
+  - ContestItemContainer
+    - ContestItemComponent
 
 The Lobby Index Container creates the full lobby list. Buttons to filter the rendered contests will be needed.
 
@@ -37,8 +46,6 @@ The Player List Container shows all players active on the given night of the con
 ### MyDashboardContainer
 - MyContestsComponent
   - Looks up current user contests
-- MyStatsComponent
-  - Looks up current user statistics
 - MyInfoComponent
   - Looks up current user news
 

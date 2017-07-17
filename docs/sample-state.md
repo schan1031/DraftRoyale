@@ -65,7 +65,7 @@
   current_team: {
     2: {
       id: 2,
-      name: 'Kirstaps Porzingis',
+      name: 'Kristaps Porzingis',
       ppg: 20,
       apg: 5,
       rpg: 15,
