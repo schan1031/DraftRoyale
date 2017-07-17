@@ -21,32 +21,32 @@
 
 ## Timeline
 
-#### Phase 1: Backend Setup/Frontend Authentication (2 Days)
+### Phase 1: Backend Setup/Frontend Authentication (2 Days)
 
 **Objectives:**
 - Functioning Rails project with front end authentication.
 
-#### Phase 2: Contest Lobby/Contest Creation (2 Days)
+### Phase 2: Contest Lobby/Contest Creation (2 Days)
 
 **Objectives:**
 - Proper display of contest lists in lobby.
 - Ability to create contests.
 
-#### Phase 3: Enter Contests Through Draft (3 Days)
+### Phase 3: Enter Contests Through Draft (3 Days)
 
 **Objectives:**
 - Properly enter users into contests.
 - Draft player list/My team interface functioning.
 - Buttons to filter players
 
-#### Phase 4: Dashboard (1 Day)
+### Phase 4: Dashboard (1 Day)
 
 **Objectives**
 - Showing user live contests.
 - List completed contests.
 - Add some personal statistics.
 
-#### Phase 5: Profile (1 Day)
+### Phase 5: Profile (1 Day)
 
 **Objectives**
 
@@ -54,7 +54,7 @@
 - User contest statistics, point graph.
 - Full contest history displayed.
 
-#### Bonus
+### Bonus
 
 **Objectives**
 - Withdraw from contests
