@@ -3,6 +3,9 @@
 ---
 
 ## Minimum Viable Product
+
+DraftRoyale is a DraftKings/Yahoo Daily Fantasy inspired app with a Rails backend and a React/Redux frontend.
+
 - Hosted on Heroku
 - Production README
 - Account Creation/Demo Login
