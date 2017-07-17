@@ -1,5 +1,9 @@
 # Database Schema
----
+
+**Notes:**
+- The users and contests table form the whole of what is being written into the database, with the entry table being the join table forming many to many relationships.
+- The players, teams, and schedule tables are information tables, used to run the contests, and create the draft of players. These tables are read-only in the app, and will be updated outside the app.
+
 ## users
 
 Column Name|Data Type|Details
@@ -19,6 +23,14 @@ creator_id|integer|not null, foreign_key
 max_contestants|integer|not null
 point_value|integer|not null
 name|string|not null
+
+## entry
+Column Name|Data Type|Details
+-|-|-
+id|integer|not null, primary key
+user_id|integer|not null, foreign_key
+contest_id|integer|not null, foreign_key
+
 
 ## players
 Column Name|Data Type|Details
@@ -51,10 +63,3 @@ id|integer|not null, primary key
 date|date|not null
 home_id|integer|not null
 away_id|integer|not null
-
-## entry
-Column Name|Data Type|Details
--|-|-
-id|integer|not null, primary key
-user_id|integer|not null, foreign_key
-contest_id|integer|not null, foreign_key
