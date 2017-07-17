@@ -1,5 +1,5 @@
 # Database Schema
-
+---
 ## users
 
 Column Name|Data Type|Details

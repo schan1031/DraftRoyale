@@ -1,5 +1,5 @@
 # API Endpoints
-
+---
 ## HTML API
 
 | Label | Method | URL | Return |
