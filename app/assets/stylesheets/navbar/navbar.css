@@ -1,0 +1,17 @@
+.header {
+  /*display: flex;
+  justify-content: center;*/
+  position: relative;
+  height: 50px;
+  top: 0;
+  background-color: gray;
+}
+
+.nav-bar {
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 85vh;
+  border: 2px black solid;
+}
