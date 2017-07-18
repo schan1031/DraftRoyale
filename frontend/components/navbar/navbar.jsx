@@ -10,24 +10,24 @@ export default class NavBar extends React.Component {
     return(
       <nav className='nav-bar'>
         <div className='left-nav'>
-          <span>img</span>
           <Link to='/'>
-            DraftRoyale
+            <button className='title'>logo</button>
+            <button className='title'>DraftRoyale</button>
           </Link>
         </div>
 
         <div className='right-nav'>
           <Link to='/dashboard'>
-            <button>Dashboard</button>
+            <button className='nav-button'>Dashboard</button>
           </Link>
           <Link to='/lobby'>
-            <button>Lobby</button>
+            <button className='nav-button'>Lobby</button>
           </Link>
           <Link to='/createcontest'>
-            <button>Create a Contest</button>
+            <button className='nav-button'>Create a Contest</button>
           </Link>
           <Link to='/login'>
-            <button>Log In</button>
+            <button className='nav-button'>Log In</button>
           </Link>
         </div>
       </nav>

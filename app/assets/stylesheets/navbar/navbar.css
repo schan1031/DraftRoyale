@@ -1,17 +1,45 @@
 .header {
-  /*display: flex;
-  justify-content: center;*/
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
   height: 50px;
   top: 0;
-  background-color: gray;
+  background-color: #2bbbff;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 .nav-bar {
   display: flex;
   align-content: center;
+  align-items: center;
   flex-direction: row;
+  justify-content: space-between;
+  width: 150vh;
+  /*border: 2px black solid;*/
+}
+
+.title {
+  font-size: 24px;
+  font-family: 'Fugaz One', cursive;
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+}
+
+.nav-button {
+  font-size: 18px;
+  font-family: 'Athiti', sans-serif;
+  background-color: transparent;
+  border: none;
+  padding-left: 50px;
+  font-weight: bold;
+}
+
+.right-nav {
+  display: flex;
   justify-content: space-around;
-  width: 85vh;
-  border: 2px black solid;
+  padding: 15px;
 }
