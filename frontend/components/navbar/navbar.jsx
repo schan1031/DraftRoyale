@@ -1,9 +1,54 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ReactModal from 'react-modal';
+import SessionFormContainer from '../session/session_form_container';
 
 export default class NavBar extends React.Component {
   constructor(props) {
     super(props);
+    this.state= {
+      showModal: false
+    };
+    this.handleOpenModal = this.handleOpenModal.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
+    this.handleLogout = this.handleLogout.bind(this);
+  }
+
+  handleLogout() {
+    this.props.logout();
+    this.setState({ showModal: false });
+  }
+
+  handleOpenModal() {
+    this.setState({ showModal: true });
+  }
+
+  handleCloseModal() {
+    this.setState({ showModal: false });
+  }
+
+  loginOrProfile() {
+    if (!this.props.currentUser) {
+      console.log('OPEN MODAL');
+      return (
+        <div>
+          <button className='nav-button' onClick={this.handleOpenModal}>Log In</button>
+          <ReactModal
+            isOpen={this.state.showModal}
+            contentLabel='LogIn'
+            className ='login-modal'
+            >
+            <SessionFormContainer />
+          </ReactModal>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <button className='nav-button' onClick={this.handleLogout}>Profile</button>
+        </div>
+      );
+    }
   }
 
   render() {
@@ -28,12 +73,16 @@ export default class NavBar extends React.Component {
           <Link to='/createcontest'>
             <button className='nav-button'>Create a Contest</button>
           </Link>
-          <Link to='/login'>
-            <button className='nav-button'>{sess}</button>
-          </Link>
+
+          {this.loginOrProfile()}
+
         </div>
       </nav>
     );
   }
 
 }
+
+// <Link to='/login'>
+//   <button className='nav-button'>{sess}</button>
+// </Link>
