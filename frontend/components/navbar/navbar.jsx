@@ -7,6 +7,8 @@ export default class NavBar extends React.Component {
   }
 
   render() {
+    const sess = this.props.currentUser ? 'Profile' : 'Log In';
+
     return(
       <nav className='nav-bar'>
         <div className='left-nav'>
@@ -27,7 +29,7 @@ export default class NavBar extends React.Component {
             <button className='nav-button'>Create a Contest</button>
           </Link>
           <Link to='/login'>
-            <button className='nav-button'>Log In</button>
+            <button className='nav-button'>{sess}</button>
           </Link>
         </div>
       </nav>
