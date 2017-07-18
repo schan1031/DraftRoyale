@@ -27,6 +27,7 @@
   font-weight: bold;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: white;
+  cursor: pointer;
 }
 
 .nav-button {
@@ -36,6 +37,7 @@
   border: none;
   padding-left: 50px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .right-nav {

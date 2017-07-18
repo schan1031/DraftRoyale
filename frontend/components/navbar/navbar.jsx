@@ -33,13 +33,15 @@ export default class NavBar extends React.Component {
       return (
         <div>
           <button className='nav-button' onClick={this.handleOpenModal}>Log In</button>
-          <ReactModal
-            isOpen={this.state.showModal}
-            contentLabel='LogIn'
-            className ='login-modal'
-            >
-            <SessionFormContainer />
-          </ReactModal>
+          <div className='modal-container'>
+            <ReactModal
+              isOpen={this.state.showModal}
+              contentLabel='LogIn'
+              className='login-modal'
+              >
+              <SessionFormContainer />
+            </ReactModal>
+          </div>
         </div>
       );
     } else {
