@@ -16,7 +16,7 @@ export const receiveOneContest = (contest) => ({
 
 export const receiveErrors = (errors) => ({
   type: RECEIVE_ERRORS,
-  errors
+  contestErrors: errors
 });
 
 export const fetchAllContests = () => dispatch => (

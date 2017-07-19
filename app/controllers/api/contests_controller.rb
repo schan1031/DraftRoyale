@@ -15,7 +15,7 @@ class Api::ContestsController < ApplicationController
     if @contest.save
       render json: @contest
     else
-      render json: @user.errors.full_messages, status: 400
+      render json: @contest.errors.full_messages, status: 400
     end
   end
 

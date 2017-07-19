@@ -4,7 +4,8 @@ import ContestForm from './contest_form';
 
 const mapStateToProps = state => ({
   contests: state.contests.contests,
-  errors: state.contests.errors
+  loggedIn: !!state.session.currentUser,
+  errors: state.contests.contestErrors
 });
 
 const mapDispatchToProps = dispatch => ({

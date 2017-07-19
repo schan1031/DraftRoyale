@@ -6,15 +6,15 @@ import { RECEIVE_ERRORS,
 
 const defaultState = {
   contests: {},
-  errors: []
+  contestErrors: []
 };
 
 const contestReducer = (state = defaultState, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_ERRORS:
-      const errors = action.errors;
-      return merge({}, defaultState, { errors });
+      const contestErrors = action.contestErrors;
+      return Object.assign({}, defaultState, { contestErrors });
     case RECEIVE_ALL_CONTESTS:
       const contests = action.contests;
       return merge({}, defaultState, { contests });
