@@ -14,7 +14,7 @@
 #
 
 class Contest < ApplicationRecord
-  validates :creator, :max_contestants, :point_value, :name, :status, presence: true
+  validates :creator, :max_contestants, :point_value, :name, presence: true
 
   belongs_to :creator,
     primary_key: :id,
