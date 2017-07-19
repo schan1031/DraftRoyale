@@ -78,8 +78,8 @@ class SessionForm extends React.Component {
           <div className='errors'>
             {this.renderErrors()}
           </div>
-          <button className='signup' value={'signup'} onClick={this.handleSubmit}>Sign Up</button>
-          <button className='login' value={'login'} onClick={this.handleSubmit}>Log In</button>
+          <button className='signup-button' value={'signup'} onClick={this.handleSubmit}>Sign Up</button>
+          <button className='login-button' value={'login'} onClick={this.handleSubmit}>Log In</button>
         </div>
 
       </div>
