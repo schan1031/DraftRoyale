@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root.jsx';
-import * as APICon from './util/contest_api_util';
+import { fetchAllContests, submitContest } from './actions/contest_actions';
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -29,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.getState = store.getState;
   window.dispatch = store.dispatch;
 
-  window.postContest = APICon.postContest;
-  window.getContests = APICon.getContests;
+  window.fetchAllContests = fetchAllContests;
+  window.submitContest = submitContest;
   window.testcon = testcon;
 });
