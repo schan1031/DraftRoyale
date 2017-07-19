@@ -5,17 +5,17 @@ export const getContests = () => (
   })
 );
 
-export const getContest = (id) => (
+export const getContest = (contest) => (
   $.ajax({
     method: 'GET',
-    url: `/api/contests/${id}`
+    url: `/api/contests/${contest.id}`
   })
 );
 
-export const deleteContest = (id) => (
+export const deleteContest = (contest) => (
   $.ajax({
     method: 'DELETE',
-    url: `/api/contests/${id}`
+    url: `/api/contests/${contest.id}`
   })
 );
 

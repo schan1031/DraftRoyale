@@ -23,14 +23,13 @@ export const login = (user) => dispatch => (
   ))
 );
 
-export const signup = (user) => dispatch => {
-  console.log(user);
-  return APIUtil.signup(user).then(userObj => (
+export const signup = (user) => dispatch => (
+  APIUtil.signup(user).then(userObj => (
     dispatch(receiveCurrentUser(userObj))
   ), errors => (
     dispatch(receiveErrors(errors.responseJSON))
-  ));
-};
+  ))
+);
 
 export const logout = () => dispatch => (
   APIUtil.logout().then(user => (
