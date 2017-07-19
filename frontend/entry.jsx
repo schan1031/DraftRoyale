@@ -4,8 +4,6 @@ import configureStore from './store/store';
 import Root from './components/root.jsx';
 import { fetchAllContests, submitContest } from './actions/contest_actions';
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (window.currentUser) {
@@ -23,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const testcon = {creator_id: 1,
     max_contestants: 10,
     point_value: 50,
-    name: 'testcontest2',
+    name: 'New Jam',
     contest_date: new Date(2017, 8, 8)
   };
 

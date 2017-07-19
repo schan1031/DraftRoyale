@@ -37,7 +37,7 @@ export const fetchContest = (contest) => dispatch => (
 
 export const submitContest = (contest) => dispatch => (
   APIUtil.postContest(contest).then(contestObj => (
-    dispatch(receiveOneContest(contest))
+    dispatch(receiveOneContest(contestObj))
   ), errors =>(
     dispatch(receiveErrors(errors.responseJSON))
   ))
