@@ -10,6 +10,7 @@
 #  status          :boolean          default(FALSE), not null
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  contest_date    :date             not null
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
