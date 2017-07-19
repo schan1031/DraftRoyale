@@ -23,6 +23,7 @@ creator_id|integer|not null, foreign_key
 max_contestants|integer|not null
 point_value|integer|not null
 name|string|not null
+status|boolean|not null, default false
 
 ## entry
 Column Name|Data Type|Details

@@ -16,6 +16,16 @@ class User < ApplicationRecord
   validates :username, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true }
 
+  has_many :contests,
+    primary_key: :id,
+    foreign_key: :creator_id,
+    class_name: :Contest
+
+  has_many :entries,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: :Entry
+
   attr_reader :password
   after_initialize :ensure_session_token
 

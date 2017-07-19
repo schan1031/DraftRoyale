@@ -22,6 +22,7 @@
 | | | | |
 |Contests|'GET'|'/api/contests'|Get Contests|
 |Contests|'POST'|'/api/contests'|Create Contest|
+|Contests|'GET'|'/api/contest/:id'|Show One Contest|
 |Contests|'DELETE'|'/api/contest/:id'|Destroy Contest|
 | | | | |
 |Teams|'GET'|'/api/teams'|Get Teams by Schedule/Filter|
