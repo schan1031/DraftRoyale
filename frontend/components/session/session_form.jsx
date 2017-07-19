@@ -40,7 +40,6 @@ class SessionForm extends React.Component {
   }
 
   handleDemo() {
-    console.log(this);
     this.intervalID = setInterval(this.demo, 75);
   }
 
