@@ -6,6 +6,7 @@ class CreateContests < ActiveRecord::Migration[5.1]
       t.integer :point_value, null: false
       t.string :name, null: false
       t.boolean :status, null: false, default: false
+      t.date :contest_date, null: false
 
       t.timestamps
     end
