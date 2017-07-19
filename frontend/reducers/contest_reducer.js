@@ -19,7 +19,6 @@ const contestReducer = (state = defaultState, action) => {
       const contests = action.contests;
       return merge({}, defaultState, { contests });
     case RECEIVE_ONE_CONTEST:
-      console.log(action.contest);
       const contest = action.contest;
       const newState = merge({}, state);
       newState.contests[contest.id] = contest;
