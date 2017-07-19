@@ -31,7 +31,7 @@
 
 .ReactModal__Overlay--after-open {
   opacity: 1;
-  transition: opacity 300ms ease-out;
+  transition: opacity 200ms ease-out;
 }
 
 .ReactModal__Content {
@@ -42,7 +42,7 @@
 .ReactModal__Content--after-open {
   -webkit-transform: scale(1) rotateX(0deg);
   transform: scale(1) rotateX(0deg);
-  transition: all 300ms ease-in;
+  transition: all 200ms ease-in;
 }
 
 .session-form {
@@ -51,7 +51,7 @@
   align-items: center;
   justify-content: space-around;
   height: 400px;
-  width: 300px;
+  width: 350px;
   font-size: 18px;
   font-family: 'Athiti', sans-serif;
   background-color: #094a68;
@@ -76,6 +76,7 @@
 
 .session-buttons {
   padding-bottom: 20px;
+  // text-align: center;
 }
 
 .session-buttons > button {
@@ -87,6 +88,7 @@
   font-size: 18px;
   background-color: #094a68;
   border: 2px white solid;
+  text-align: center;
 }
 
 .signup-button {
@@ -101,4 +103,9 @@
 
 input {
   border-radius: 5px;
+}
+
+.error {
+  list-style-type: none;
+  font-size: 14px;
 }
