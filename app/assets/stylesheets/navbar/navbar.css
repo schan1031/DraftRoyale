@@ -4,7 +4,7 @@
   align-content: center;
   height: 50px;
   top: 0;
-  background-color: #2bbbff;
+  background-color: #094a68;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
@@ -31,6 +31,7 @@
 }
 
 .nav-button {
+  color: white;
   font-size: 18px;
   font-family: 'Athiti', sans-serif;
   background-color: transparent;
@@ -38,6 +39,11 @@
   padding-left: 50px;
   font-weight: bold;
   cursor: pointer;
+  outline: none;
+}
+.nav-button:hover {
+  transform: scale(1.1);
+  color: gray;
 }
 
 .right-nav {

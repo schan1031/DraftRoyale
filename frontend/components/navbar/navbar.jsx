@@ -29,7 +29,6 @@ export default class NavBar extends React.Component {
 
   loginOrProfile() {
     if (!this.props.currentUser) {
-      console.log('OPEN MODAL');
       return (
         <div>
           <button className='nav-button' onClick={this.handleOpenModal}>Log In</button>
@@ -38,6 +37,7 @@ export default class NavBar extends React.Component {
               isOpen={this.state.showModal}
               contentLabel='LogIn'
               className='login-modal'
+              onRequestClose={this.handleCloseModal}
               >
               <SessionFormContainer />
             </ReactModal>

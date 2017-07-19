@@ -9,13 +9,15 @@
 // }
 
 .login-modal {
-  border: 2px black solid;
+  // border: 2px black solid;
+  outline: none;
   display: flex;
   margin: auto;
   margin-top: 200px;
   justify-content: center;
   align-items: center;
-  width: 500px;
+  height: 500px;
+  width: 400px;
 }
 
 .ReactModal__Overlay {
@@ -41,4 +43,48 @@
   -webkit-transform: scale(1) rotateX(0deg);
   transform: scale(1) rotateX(0deg);
   transition: all 300ms ease-in;
+}
+
+.session-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 400px;
+  width: 300px;
+  font-size: 18px;
+  font-family: 'Athiti', sans-serif;
+  background-color: #094a68;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.session-form > h2 {
+  font-family: 'Athiti', sans-serif;
+  color: white;
+}
+
+.input-field{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  width: 250px;
+}
+
+.session-buttons {
+  padding-bottom: 20px;
+}
+
+.session-buttons > button {
+  height: 40px;
+  font-size: 18px;
+  background-color: #094a68;
+  border-radius: 10px;
+}
+
+input {
+  border-radius: 5px;
 }
