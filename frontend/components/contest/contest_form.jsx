@@ -53,12 +53,14 @@ export default class ContestForm extends React.Component {
       }
     }
 
+    if (!this.props.loggedIn) {
+      return <Redirect to='/' />;
+    }
+
     return (
       <div className='contest-form-container'>
         <div className='create-contest-form'>
           <h2>Enter Contest Details</h2>
-
-
 
           <div className='input-field'>
             <span>Name</span>

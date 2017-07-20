@@ -11,6 +11,11 @@
   border-radius: 10px;
   font-family: 'Athiti', sans-serif;
   box-shadow: 3px 3px black;
+  opacity: 0.9;
+}
+
+.create-contest-form.{
+
 }
 
 .contest-form-container {

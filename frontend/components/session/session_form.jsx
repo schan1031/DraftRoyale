@@ -84,10 +84,6 @@ class SessionForm extends React.Component {
       return <Redirect to='/' />;
     }
 
-    // const formType = this.props.formType;
-    // const otherType = (formType === '/login') ? 'signup' : 'login';
-    // const title = (formType === '/login') ? 'Log In' : 'Sign Up';
-
     return (
       <div className='session-form'>
         <h2>Sign In/Log In</h2>
