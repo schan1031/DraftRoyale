@@ -10,4 +10,20 @@
 #
 
 class Team < ApplicationRecord
+  validates :name, presence: true
+
+  has_many :players,
+    primary_key: :id,
+    foreign_key: :team_id,
+    class_name: :Player
+
+  belongs_to :home_game,
+    primary_key: :id,
+    foreign_key: :home_id,
+    class_name: :Schedule
+
+  belongs_to :away_game,
+    primary_key: :id,
+    foreign_key: :away_id,
+    class_name: :Schedule
 end
