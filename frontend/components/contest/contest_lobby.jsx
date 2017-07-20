@@ -19,20 +19,25 @@ export default class ContestLobby extends React.Component {
 
     const contests = values(this.props.contests);
     const contestItems = contests.map(
-      contest => <ContestItem key={contest.id} contest={contest} />
+      (contest, idx) => <ContestItem key={idx} contest={contest} />
     );
 
     return(
       <div className='lobby-list'>
-        <ul>
-          <li>
-            <span>Contest Name</span>
-            <span>Point Value</span>
-            <span>Max Contestants</span>
-            <span>Prize Pot</span>
-          </li>
-          {contestItems}
-        </ul>
+        <table className='list-table'>
+          <thead>
+            <tr>
+              <th>Contest Name</th>
+              <th>Point Value</th>
+              <th>Max Contestants</th>
+              <th>Prize Pot</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {contestItems}
+          </tbody>
+        </table>
       </div>
     );
   }
