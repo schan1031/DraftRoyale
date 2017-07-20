@@ -1,6 +1,7 @@
 import React from 'react';
 import { values } from 'lodash';
 import ContestItem from './contest_item';
+import { Redirect } from 'react-router-dom';
 
 export default class ContestLobby extends React.Component {
   constructor(props) {
@@ -24,14 +25,14 @@ export default class ContestLobby extends React.Component {
 
     return(
       <div className='lobby-list'>
-        <table className='list-table'>
+        <table className='list-table table--fixed'>
           <thead>
             <tr>
-              <th>Contest Name</th>
-              <th>Point Value</th>
-              <th>Max Contestants</th>
-              <th>Prize Pot</th>
-              <th>Contest Date</th>
+              <th className='cn'>Contest Name</th>
+              <th className='pv'>Point Value</th>
+              <th className='mc'>Max Contestants</th>
+              <th className='pp'>Prize Pot</th>
+              <th className='cd'>Contest Date</th>
               <th></th>
             </tr>
           </thead>

@@ -1,0 +1,115 @@
+.lobby-list {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  align-items: flex-start;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.list-table {
+  box-shadow: 3px 3px black;
+  font-family: 'Athiti', sans-serif;
+  color: white;
+  background-color: #094a68;
+  border-radius: 10px;
+  overflow-y: scroll;
+}
+
+.table--fixed tbody tr:nth-child(odd){
+  background-color: #142c49;
+  /*border: 10px #142c49 solid;*/
+}
+
+.table--fixed tr:nth-child(odd)>td {
+  outline: 2px #142c49 solid;
+}
+
+.table--fixed {
+  display: flex;
+  flex-flow: column;
+  overflow: hidden;
+}
+
+.table--fixed thead {
+  // display: flex;
+  // // text-align: right;
+  // > tr {
+  //   display: flex;
+  //   >th {
+  //     flex: 1;
+  //   }
+  //   >th:nth-child(2) {
+  //     flex: 0 0 20px;
+  //   }
+  // }
+
+}
+
+.table--fixed tbody {
+  max-height: 656px;
+  // overflow: hidden;
+  overflow-y: auto;
+  width: 100%;
+}
+
+/* Contest Formatting*/
+.contest-data-l {
+  width: 250px;
+}
+
+.contest-data-s {
+  width: 150px;
+}
+
+td {
+  font-size: 16px;
+}
+
+th, td {
+  /*text-align: left;*/
+  padding: 10px;
+  font-weight: bold;
+}
+
+th {
+  font-size: 20px;
+  /*border-bottom: 1px solid #cee1ff;*/
+}
+
+.cn {
+  padding-right: 142px;
+}
+
+.pv {
+  padding-right: 66px;
+}
+
+.mc {
+  padding-right: 22px;
+}
+
+.pp {
+  padding-right: 84px;
+}
+
+.enter-contest {
+  padding-right: 10px;
+  padding-bottom: 5px;
+}
+
+.enter-button {
+  font-family: 'Athiti', sans-serif;
+  width: 80px;
+  background-color: #70a1ef;
+  border: none;
+  box-shadow: 1px 1px black;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+}
+
+.enter-button:hover {
+  background-color: #276d11;
+  color: white;
+}

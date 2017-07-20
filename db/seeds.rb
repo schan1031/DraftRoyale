@@ -16,4 +16,11 @@ Contest.create(creator_id: u1.id,
   point_value: 50,
   name: 'NBA Jam',
   contest_date: Date.new(2017, 8, 8)
-  )
+)
+
+Contest.create(creator_id: u2.id,
+  max_contestants: 20,
+  point_value: 50,
+  name: 'Kobe!!!!',
+  contest_date: Date.new(2017, 7, 25)
+)
