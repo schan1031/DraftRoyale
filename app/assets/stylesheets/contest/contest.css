@@ -21,3 +21,9 @@
   justify-content: center;
   height: 90vh;
 }
+
+.enter-button {
+  font-family: 'Athiti', sans-serif;
+  border-radius: 5px;
+  
+}

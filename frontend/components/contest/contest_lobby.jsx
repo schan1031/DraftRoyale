@@ -31,6 +31,7 @@ export default class ContestLobby extends React.Component {
               <th>Point Value</th>
               <th>Max Contestants</th>
               <th>Prize Pot</th>
+              <th>Contest Date</th>
               <th></th>
             </tr>
           </thead>

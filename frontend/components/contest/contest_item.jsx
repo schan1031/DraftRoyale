@@ -8,6 +8,7 @@ const ContestItem = ( { contest } ) => {
       <td className='contest-data-s'>{contest.point_value}</td>
       <td className='contest-data-s'>{contest.max_contestants}</td>
       <td className='contest-data-s'>{prizePot}</td>
+      <td className='contest-data-s'>{contest.contest_date}</td>
       <td className='enter-contest'>
         <button className='enter-button'>Enter</button>
       </td>
