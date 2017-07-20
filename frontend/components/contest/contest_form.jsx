@@ -54,28 +54,38 @@ export default class ContestForm extends React.Component {
     }
 
     return (
-      <div className='create-contest-form'>
-        <h2>Enter Contest Details</h2>
+      <div className='contest-form-container'>
+        <div className='create-contest-form'>
+          <h2>Enter Contest Details</h2>
 
-        {this.renderErrors()}
 
-        <div className='input-field'>
-          <span>Name</span>
-          <input type='text' value={this.state.name} onChange={this.update('name')}/>
+
+          <div className='input-field'>
+            <span>Name</span>
+            <input type='text' value={this.state.name} onChange={this.update('name')}/>
+          </div>
+
+          <div className='input-field'>
+            <span>{'Point Value'}</span>
+            <input type='number' value={this.state.point_value} onChange={this.update('point_value')}/>
+          </div>
+
+          <div className='input-field'>
+            <span>Max Contestants</span>
+            <input type='number' value={this.state.max_contestants} onChange={this.update('max_contestants')}/>
+          </div>
+
+          <div className='input-field'>
+            <span>Date</span>
+            <input type='date' value={this.state.contest_date} onChange={this.update('contest_date')}/>
+          </div>
+
+          <div>
+            {this.renderErrors()}
+            <button className='demologin-button' onClick={this.handleSubmit}>Submit</button>
+          </div>
+
         </div>
-
-        <div className='input-field'>
-          <span>{'Point Value'}</span>
-          <input type='number' value={this.state.point_value} onChange={this.update('point_value')}/>
-        </div>
-
-        <div className='input-field'>
-          <span>Max Contestants</span>
-          <input type='number' value={this.state.max_contestants} onChange={this.update('max_contestants')}/>
-        </div>
-
-        <button className='demologin-button' onClick={this.handleSubmit}>Submit</button>
-
       </div>
     );
   }

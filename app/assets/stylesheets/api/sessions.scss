@@ -23,14 +23,13 @@
 .ReactModal__Overlay {
   -webkit-perspective: 600;
   perspective: 600;
-  opacity: 0;
   overflow-x: hidden;
   overflow-y: auto;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
 .ReactModal__Overlay--after-open {
-  opacity: 1;
+  opacity: .8;
   transition: opacity 200ms ease-out;
 }
 
@@ -58,6 +57,7 @@
   color: white;
   font-weight: bold;
   border-radius: 10px;
+  box-shadow: 3px 3px black;
 }
 
 .session-form > h2 {

@@ -1,0 +1,22 @@
+.create-contest-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #094a68;
+  height: 500px;
+  width: 400px;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  font-family: 'Athiti', sans-serif;
+  box-shadow: 3px 3px black;
+}
+
+.contest-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
