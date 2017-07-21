@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root.jsx';
 import { fetchAllContests, submitContest } from './actions/contest_actions';
+import { fetchPlayers } from './actions/player_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -31,4 +32,5 @@ document.addEventListener('DOMContentLoaded', () => {
   window.fetchAllContests = fetchAllContests;
   window.submitContest = submitContest;
   window.testcon = testcon;
+  window.fetchPlayers = fetchPlayers;
 });
