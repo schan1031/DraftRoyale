@@ -33,7 +33,7 @@ export default class ContestLobby extends React.Component {
               <th className='mc'>Max Contestants</th>
               <th className='pp'>Prize Pot</th>
               <th className='cd'>Contest Date</th>
-              <th></th>
+              <th className='empty'></th>
             </tr>
           </thead>
           <tbody>

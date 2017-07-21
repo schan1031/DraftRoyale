@@ -48,9 +48,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  height: 475px;
-  width: 350px;
+  justify-content: flex-start;
+  height: 380px;
+  width: 320px;
   font-size: 18px;
   font-family: 'Athiti', sans-serif;
   background-color: #094a68;
@@ -63,18 +63,36 @@
 .session-form > h2 {
   font-family: 'Athiti', sans-serif;
   color: white;
+  margin-bottom: 20;
 }
 
-.input-field{
+.input-field {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: left;
   height: 80px;
-  width: 250px;
+  width: 200px;
 }
 
-.session-buttons {
+.input-field > input {
+  width: 196px;
+}
+
+.input-field > span {
+  padding-bottom: 5px;
+}
+
+.errors > ul {
+  margin: 0;
+  width: 180px;
+  height: 30px;
+  text-align: center;
+}
+
+.error {
+  color: red;
+  margin: auto;
 }
 
 .session-buttons > button {
@@ -92,12 +110,12 @@
 
 .signup-button {
   border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  // border-bottom-left-radius: 10px;
 }
 
 .login-button {
   border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  // border-bottom-right-radius: 10px;
 }
 
 input {
@@ -119,6 +137,7 @@ input {
   background-color: #094a68;
   border: 2px white solid;
   text-align: center;
-  border-radius: 10px;
   cursor: pointer;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }

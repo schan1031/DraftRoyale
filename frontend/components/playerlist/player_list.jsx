@@ -1,4 +1,6 @@
 import React from 'react';
+import { values } from 'lodash';
+import PlayerItem from './player_item';
 
 export default class PlayerList extends React.Component {
   constructor(props) {
@@ -25,8 +27,8 @@ export default class PlayerList extends React.Component {
       this.props.fetchPlayers({
         team_ids: out
       });
+      console.log(out);
     }
-
   }
 
   render() {
@@ -37,10 +39,16 @@ export default class PlayerList extends React.Component {
       );
     } else {
       const p1 = this.props.players[Object.keys(this.props.players)[0]];
+
+      const players = values(this.props.players);
+      const playerItems = players.map(
+        (player, idx) => <PlayerItem key={idx} player={player} />
+    );
+
       console.log(p1);
       return (
         <div>
-          {p1.name} here it is
+          {playerItems}
         </div>
       );
     }

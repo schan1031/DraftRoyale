@@ -31,8 +31,9 @@
   overflow: hidden;
 }
 
-.table--fixed thead {
-  // display: flex;
+.table--fixed thead>tr {
+  display: flex;
+  justify-content: flex-start;
   // // text-align: right;
   // > tr {
   //   display: flex;
@@ -74,23 +75,32 @@ th, td {
 
 th {
   font-size: 20px;
+  text-align: left;
   /*border-bottom: 1px solid #cee1ff;*/
 }
 
 .cn {
-  padding-right: 142px;
+  width: 23.5%
 }
 
 .pv {
-  padding-right: 66px;
+  width: 14%;
 }
 
 .mc {
-  padding-right: 22px;
+  width: 14%;
 }
 
 .pp {
-  padding-right: 84px;
+  width: 14%;
+}
+
+.cd {
+  width: 14%;
+}
+
+.empty {
+  width: 10%
 }
 
 .enter-contest {

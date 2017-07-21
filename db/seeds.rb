@@ -52,19 +52,27 @@ c2 = Contest.create(creator_id: u2.id,
 )
 
 knicks = [
-  {name: 'Carmelo Anthony', position: 'PF', ppg: 22.4, apg: 2.9, rpg: 5.9, spg: 0.8, bpg: 0.5, ft: 0.833, fg: 0.433, height: 80, weight: 240, team_id: knicks_id},
-  {name: 'Kristaps Porzingis', position: 'C', ppg: 16.1, apg: 1.4, rpg: 7.3, spg: 0.7, bpg: 1.9, ft: 0.811, fg: 0.436, height: 87, weight: 240, team_id: knicks_id}
+  {name: 'Carmelo Anthony', position: 'PF', ppg: 22.4, apg: 2.9, rpg: 5.9, spg: 0.8, bpg: 0.5, ft: 0.833, fg: 0.433, height: 80, weight: 240, team_id: knicks_id, image_url: 'https://nba-players.herokuapp.com/players/anthony/carmelo'},
+  {name: 'Kristaps Porzingis', position: 'C', ppg: 16.1, apg: 1.4, rpg: 7.3, spg: 0.7, bpg: 1.9, ft: 0.811, fg: 0.436, height: 87, weight: 240, team_id: knicks_id, image_url: 'https://nba-players.herokuapp.com/players/porzingis/kristaps'}
+]
+
+nets = [
+  {name: 'Jeremy Lin', position: 'PG', ppg: 12.0, apg: 4.5, rpg: 2.9, spg: 1.2, bpg: 0.4, ft: 0.804, fg: 0.433, height: 75, weight: 200, team_id: nets_id, image_url: 'https://nba-players.herokuapp.com/players/lin/jeremy'}
+]
+
+bulls = [
+  {name: 'Dwyane Wade', position: 'SG', ppg: 23.3, apg: 5.7, rpg: 4.8, spg: 1.6, bpg: 0.9, ft: 0.768, fg: 0.484, height: 76, weight: 220, team_id: bulls_id, image_url: 'https://nba-players.herokuapp.com/players/wade/dwyane'}
 ]
 
 knicks.each do |player|
   Player.create(player)
 end
 
-nets = [
-  {name: 'Jeremy Lin', position: 'PG', ppg: 12.0, apg: 4.5, rpg: 2.9, spg: 1.2, bpg: 0.4, ft: 0.804, fg: 0.433, height: 75, weight: 200, team_id: nets_id}
-]
-
 nets.each do |player|
+  Player.create(player)
+end
+
+bulls.each do |player|
   Player.create(player)
 end
 
@@ -83,5 +91,6 @@ Entry.create(e1)
 
 Schedule.create(date: Date.new(2017, 7, 25), home_id: knicks_id, away_id: nets_id )
 Schedule.create(date: Date.new(2017, 7, 25), home_id: nets_id, away_id: knicks_id )
+Schedule.create(date: Date.new(2017, 7, 25), home_id: bulls_id, away_id: knicks_id )
 Schedule.create(date: Date.new(2017, 7, 20), home_id: bulls_id, away_id: knicks_id)
 Schedule.create(date: Date.new(2017, 7, 20), home_id: nets_id, away_id: bulls_id)

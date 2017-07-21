@@ -92,7 +92,11 @@ class SessionForm extends React.Component {
 
     return (
       <div className='session-form'>
-        <h2>Sign In/Log In</h2>
+        <h2>Play Now!</h2>
+
+        <div className='errors'>
+          {this.renderErrors()}
+        </div>
 
         <div className='input-field'>
           <span>Username</span>
@@ -105,9 +109,6 @@ class SessionForm extends React.Component {
         </div>
 
         <div className='session-buttons'>
-          <div className='errors'>
-            {this.renderErrors()}
-          </div>
           <button className='signup-button' value={'signup'} onClick={this.handleSubmit}>Sign Up</button>
           <button className='login-button' value={'login'} onClick={this.handleSubmit}>Log In</button>
         </div>

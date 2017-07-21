@@ -3,7 +3,8 @@ import { RECEIVE_PLAYERS } from '../actions/player_actions';
 
 const defaultState = {
   players: {},
-  player_errors: []
+  player_errors: [],
+  myTeam: {}
 };
 
 const playerReducer = (state = defaultState, action) => {
@@ -11,7 +12,7 @@ const playerReducer = (state = defaultState, action) => {
   switch (action.type) {
     case RECEIVE_PLAYERS:
       const players = action.players;
-      return merge({}, defaultState, { players });
+      return Object.assign({}, defaultState, { players });
     default:
       return state;
   }
