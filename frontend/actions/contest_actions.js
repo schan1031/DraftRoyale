@@ -4,7 +4,7 @@ export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 export const RECEIVE_SCHEDULE = 'RECEIVE_SCHEDULE';
 
 import * as APIUtil from '../util/contest_api_util';
-import { getSchedule } from '../util/schedule_api_util'
+import { getSchedule } from '../util/schedule_api_util';
 
 export const receiveAllContests = (contests) => ({
   type: RECEIVE_ALL_CONTESTS,

@@ -25,6 +25,15 @@ Orlando\ Magic Memphis\ Grizzlies
 Charlotte\ Hornets Utah\ Jazz
 )
 
+teams.each do |team|
+  Team.create(name: team)
+end
+
+knicks_id = Team.first.id
+nets_id = Team.find_by_name('Brooklyn Nets').id
+bulls_id = Team.find_by_name('Chicago Bulls').id
+
+
 u1 = User.create(username: 'bob', password: 'password')
 u2 = User.create(username: 'IamADemo', password: 'password')
 
@@ -41,13 +50,6 @@ c2 = Contest.create(creator_id: u2.id,
   name: 'Kobe!!!!',
   contest_date: Date.new(2017, 7, 25)
 )
-
-teams.each do |team|
-  Team.create(name: team)
-end
-
-knicks_id = Team.first.id
-nets_id = Team.find_by_name('Brooklyn Nets').id
 
 knicks = [
   {name: 'Carmelo Anthony', position: 'PF', ppg: 22.4, apg: 2.9, rpg: 5.9, spg: 0.8, bpg: 0.5, ft: 0.833, fg: 0.433, height: 80, weight: 240, team_id: knicks_id},
@@ -81,3 +83,5 @@ Entry.create(e1)
 
 Schedule.create(date: Date.new(2017, 7, 25), home_id: knicks_id, away_id: nets_id )
 Schedule.create(date: Date.new(2017, 7, 25), home_id: nets_id, away_id: knicks_id )
+Schedule.create(date: Date.new(2017, 7, 20), home_id: bulls_id, away_id: knicks_id)
+Schedule.create(date: Date.new(2017, 7, 20), home_id: nets_id, away_id: bulls_id)
