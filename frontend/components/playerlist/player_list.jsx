@@ -1,6 +1,7 @@
 import React from 'react';
 import { values } from 'lodash';
 import PlayerItem from './player_item';
+import MyTeam from './my_team';
 
 export default class PlayerList extends React.Component {
   constructor(props) {
@@ -33,7 +34,7 @@ export default class PlayerList extends React.Component {
 
   render() {
     console.log(this.props.players);
-    if (Object.keys(this.props.players).length === 0) {
+    if (Object.keys(this.props.players).length === 0 && Object.keys(this.props.myTeam).length === 0) {
       return(
         <div></div>
       );
@@ -41,14 +42,26 @@ export default class PlayerList extends React.Component {
       const p1 = this.props.players[Object.keys(this.props.players)[0]];
 
       const players = values(this.props.players);
+      const myPlayers = values(this.props.myTeam);
       const playerItems = players.map(
-        (player, idx) => <PlayerItem key={idx} player={player} />
-    );
+        (player, idx) => <PlayerItem key={idx} player={player} draftPlayer={this.props.draftPlayer}/>
+      );
+
+      const myTeam = myPlayers.map(
+        (player, idx) => <MyTeam key={idx} player={player} returnPlayer={this.props.returnPlayer} />
+      );
 
       console.log(p1);
       return (
         <div>
-          {playerItems}
+          Player List
+          <ul>
+            {playerItems}
+          </ul>
+          My Team
+          <ul>
+            {myTeam}
+          </ul>
         </div>
       );
     }

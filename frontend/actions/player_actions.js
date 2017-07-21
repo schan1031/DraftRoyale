@@ -1,4 +1,6 @@
 export const RECEIVE_PLAYERS = 'RECEIVE_PLAYERS';
+export const DRAFT_PLAYER = 'DRAFT_PLAYER';
+export const RETURN_PLAYER = 'RETURN_PLAYER';
 
 import * as APIUtil from '../util/player_api_util';
 
@@ -12,3 +14,13 @@ export const fetchPlayers = (teamIds) => dispatch => (
     players => dispatch(receivePlayers(players))
   )
 );
+
+export const draftPlayer = player => ({
+  type: DRAFT_PLAYER,
+  player
+});
+
+export const returnPlayer = player => ({
+  type: RETURN_PLAYER,
+  player
+});

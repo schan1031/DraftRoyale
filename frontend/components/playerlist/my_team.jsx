@@ -1,18 +1,18 @@
 import React from 'react';
 
-export default class PlayerItem extends React.Component {
+export default class MyTeam extends React.Component {
   constructor(props) {
     super(props);
     this.handleSwap = this.handleSwap.bind(this);
   }
 
   handleSwap() {
-    this.props.draftPlayer(this.props.player);
+    this.props.returnPlayer(this.props.player);
   }
 
-  render() {
+  render () {
     const player = this.props.player;
-    console.log(player.image_url);
+
     return(
       <li>
         <div className='headshot'>
@@ -27,7 +27,7 @@ export default class PlayerItem extends React.Component {
         <div className='height-weight'>
           {player.height} / {player.weight}
         </div>
-        <button onClick={this.handleSwap}>Draft</button>
+        <button onClick={this.handleSwap}>Drop</button>
       </li>
     );
   }
