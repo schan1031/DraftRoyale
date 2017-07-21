@@ -1,12 +1,14 @@
 import merge from 'lodash/merge';
 import { RECEIVE_ERRORS,
   RECEIVE_ALL_CONTESTS,
-  RECEIVE_ONE_CONTEST
+  RECEIVE_ONE_CONTEST,
+  RECEIVE_SCHEDULE
 } from '../actions/contest_actions';
 
 const defaultState = {
   contests: {},
-  contestErrors: []
+  contestErrors: [],
+  schedule: {}
 };
 
 const contestReducer = (state = defaultState, action) => {
@@ -23,6 +25,9 @@ const contestReducer = (state = defaultState, action) => {
       const newState = merge({}, state);
       newState.contests[contest.id] = contest;
       return newState;
+    case RECEIVE_SCHEDULE:
+      const schedule = action.schedule;
+      return merge({}, state, { schedule });
     default:
       return state;
   }

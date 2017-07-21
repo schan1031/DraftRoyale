@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchAllContests } from '../../actions/contest_actions';
+import { fetchAllContests, fetchSchedule } from '../../actions/contest_actions';
 import ContestLobby from './contest_lobby';
 
 const mapStateToProps = state => ({
@@ -8,7 +8,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchAllContests: () => dispatch(fetchAllContests())
+  fetchAllContests: () => dispatch(fetchAllContests()),
+  fetchSchedule: (date) => dispatch(fetchSchedule(date))
 });
 
 export default connect(

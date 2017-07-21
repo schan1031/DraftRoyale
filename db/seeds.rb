@@ -80,3 +80,4 @@ e1 = {user_id: u1.id, contest_id: c1.id,
 Entry.create(e1)
 
 Schedule.create(date: Date.new(2017, 7, 25), home_id: knicks_id, away_id: nets_id )
+Schedule.create(date: Date.new(2017, 7, 25), home_id: nets_id, away_id: knicks_id )

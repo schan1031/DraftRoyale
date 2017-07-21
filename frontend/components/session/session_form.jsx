@@ -40,6 +40,12 @@ class SessionForm extends React.Component {
   }
 
   handleDemo() {
+    if (this.state.username) {
+      this.state = {
+        username: "",
+  			password: ""
+      };
+    }
     this.intervalID = setInterval(this.demo, 75);
   }
 

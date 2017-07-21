@@ -1,8 +1,10 @@
 export const RECEIVE_ALL_CONTESTS = 'RECEIVE_CONTESTS';
 export const RECEIVE_ONE_CONTEST = 'RECEIVE_ONE_CONTEST';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
+export const RECEIVE_SCHEDULE = 'RECEIVE_SCHEDULE';
 
 import * as APIUtil from '../util/contest_api_util';
+import { getSchedule } from '../util/schedule_api_util'
 
 export const receiveAllContests = (contests) => ({
   type: RECEIVE_ALL_CONTESTS,
@@ -17,6 +19,11 @@ export const receiveOneContest = (contest) => ({
 export const receiveErrors = (errors) => ({
   type: RECEIVE_ERRORS,
   contestErrors: errors
+});
+
+export const receiveSchedule = (schedule) => ({
+  type: RECEIVE_SCHEDULE,
+  schedule
 });
 
 export const fetchAllContests = () => dispatch => (
@@ -41,4 +48,10 @@ export const submitContest = (contest) => dispatch => (
   ), errors =>(
     dispatch(receiveErrors(errors.responseJSON))
   ))
+);
+
+export const fetchSchedule = (date) => dispatch => (
+  getSchedule(date).then(
+    dateObj => dispatch(receiveSchedule(dateObj))
+  )
 );
