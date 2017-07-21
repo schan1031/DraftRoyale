@@ -17,12 +17,12 @@ class Team < ApplicationRecord
     foreign_key: :team_id,
     class_name: :Player
 
-  belongs_to :home_game,
+  has_many :home_game,
     primary_key: :id,
     foreign_key: :home_id,
     class_name: :Schedule
 
-  belongs_to :away_game,
+  has_many :away_game,
     primary_key: :id,
     foreign_key: :away_id,
     class_name: :Schedule

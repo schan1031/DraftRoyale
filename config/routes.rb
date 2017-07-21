@@ -6,5 +6,7 @@ Rails.application.routes.draw do
     resources :users, only: [:create]
     resource :session, only: [:create, :destroy]
     resources :contests, only: [:index, :create, :show, :delete]
+    resources :players, only: [:index, :show]
+    resources :schedule, only: [:index, :show]
   end
 end

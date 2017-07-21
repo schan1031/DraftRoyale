@@ -13,12 +13,12 @@
 class Schedule < ApplicationRecord
   validates :date, :home_id, :away_id, presence: true
 
-  has_many :home_teams,
+  belongs_to :home_teams,
     primary_key: :id,
     foreign_key: :home_id,
     class_name: :Team
 
-  has_many :away_teams,
+  belongs_to :away_teams,
     primary_key: :id,
     foreign_key: :away_id,
     class_name: :Team
