@@ -127,6 +127,27 @@ celtics = [
   {name: 'Tyler Zeller', position: 'PF', ppg: 3.5, apg: 0.8, rpg: 2.4, spg: 0.1, bpg: 0.4, ft: 0.564, fg: 0.494, height: 76, weight: 220, team_id: knicks_id, image_url: 'https://nba-players.herokuapp.com/players/zeller/tyler'}
 ]
 
+lakers = [
+  {name: 'Jordan Clarkson', position: 'PF', ppg: 14.7, apg: 2.6, rpg: 3.0, spg: 1.1, bpg: 0.1, ft: 0.798, fg: 0.445, height: 76, weight: 220, team_id: knicks_id, image_url: 'https://nba-players.herokuapp.com/players/clarkson/jordan'},
+  {name: 'Julius Randle', position: 'PF', ppg: 13.2, apg: 3.6, rpg: 8.6, spg: 0.7, bpg: 0.5, ft: 0.723, fg: 0.488, height: 76, weight: 220, team_id: knicks_id, image_url: 'https://nba-players.herokuapp.com/players/randle/julius'},
+  {name: 'Brandon Ingram', position: 'PF', ppg: 9.4, apg: 2.1, rpg: 4.0, spg: 0.6, bpg: 0.5, ft: 0.621, fg: 0.402, height: 76, weight: 220, team_id: knicks_id, image_url: 'https://nba-players.herokuapp.com/players/ingram/brandon'},
+  {name: 'DAngelo Russell', position: 'PF', ppg: 15.6, apg: 4.8, rpg: 3.5, spg: 1.4, bpg: 0.3, ft: 0.782, fg: 0.405, height: 76, weight: 220, team_id: knicks_id, image_url: 'https://nba-players.herokuapp.com/players/russell/dangelo'},
+  {name: 'Luol Deng', position: 'PF', ppg: 7.6, apg: 1.3, rpg: 5.3, spg: 0.9, bpg: 0.4, ft: 0.730, fg: 0.387, height: 76, weight: 220, team_id: knicks_id, image_url: 'https://nba-players.herokuapp.com/players/deng/luol'},
+  {name: 'Nick Young', position: 'PF', ppg: 13.2, apg: 1.0, rpg: 2.3, spg: 0.6, bpg: 0.2, ft: 0.856, fg: 0.430, height: 76, weight: 220, team_id: knicks_id, image_url: 'https://nba-players.herokuapp.com/players/young/nick'},
+  {name: 'Lou Williams', position: 'PF', ppg: 18.6, apg: 3.2, rpg: 2.3, spg: 1.1, bpg: 0.2, ft: 0.884, fg: 0.444, height: 76, weight: 220, team_id: knicks_id, image_url: 'https://nba-players.herokuapp.com/players/williams/lou'},
+  {name: 'Larry Nance Jr.', position: 'PF', ppg: 7.1, apg: 1.5, rpg: 5.9, spg: 1.3, bpg: 0.6, ft: 0.738, fg: 0.526, height: 76, weight: 220, team_id: knicks_id, image_url: 'https://nba-players.herokuapp.com/players/nance/larry'},
+  {name: 'Timofey Mozgov', position: 'PF', ppg: 7.4, apg: 0.8, rpg: 4.9, spg: 0.3, bpg: 0.6, ft: 0.808, fg: 0.515, height: 76, weight: 220, team_id: knicks_id, image_url: 'https://nba-players.herokuapp.com/players/mozgov/timofey'},
+  {name: 'David Nwaba', position: 'PF', ppg: 6.0, apg: 0.7, rpg: 3.2, spg: 0.7, bpg: 0.4, ft: 0.641, fg: 0.580, height: 76, weight: 220, team_id: knicks_id, image_url: 'https://nba-players.herokuapp.com/players/nwaba/david'},
+  {name: 'Tyler Ennis', position: 'PF', ppg: 7.7, apg: 2.4, rpg: 1.2, spg: 0.9, bpg: 0.1, ft: 0.864, fg: 0.451, height: 76, weight: 220, team_id: knicks_id, image_url: 'https://nba-players.herokuapp.com/players/ennis/tyler'},
+  {name: 'Tarik Black', position: 'PF', ppg: 5.7, apg: 0.6, rpg: 5.1, spg: 0.4, bpg: 0.7, ft: 0.752, fg: 0.510, height: 76, weight: 220, team_id: knicks_id, image_url: 'https://nba-players.herokuapp.com/players/black/tarik'},
+  {name: 'Ivica Zubac', position: 'PF', ppg: 7.5, apg: 0.8, rpg: 4.2, spg: 0.4, bpg: 0.9, ft: 0.653, fg: 0.529, height: 76, weight: 220, team_id: knicks_id, image_url: 'https://nba-players.herokuapp.com/players/zubac/ivica'},
+  {name: 'Corey Brewer', position: 'PF', ppg: 5.4, apg: 1.5, rpg: 2.2, spg: 1.0, bpg: 0.3, ft: 0.750, fg: 0.438, height: 76, weight: 220, team_id: knicks_id, image_url: 'https://nba-players.herokuapp.com/players/brewer/corey'},
+  {name: 'Jose Calderon', position: 'PF', ppg: 3.3, apg: 2.1, rpg: 1.8, spg: 0.3, bpg: 0.0, ft: 1.000, fg: 0.416, height: 76, weight: 220, team_id: knicks_id, image_url: 'https://nba-players.herokuapp.com/players/calderon/jose'}, 
+  {name: 'Thomas Robinson', position: 'PF', ppg: 5.0, apg: 0.6, rpg: 4.6, spg: 0.5, bpg: 0.2, ft: 0.470, fg: 0.536, height: 76, weight: 220, team_id: knicks_id, image_url: 'https://nba-players.herokuapp.com/players/robinson/thomas'},
+  {name: 'Marcelo Huertas', position: 'PF', ppg: 2.7, apg: 2.3, rpg: 1.0, spg: 0.4, bpg: 0.1, ft: 0.529, fg: 0.368, height: 76, weight: 220, team_id: knicks_id, image_url: 'https://nba-players.herokuapp.com/players/huertas/marcelo'},
+  {name: 'Metta World Peace', position: 'PF', ppg: 2.3, apg: 0.4, rpg: 0.8, spg: 0.4, bpg: 0.1, ft: 0.625, fg: 0.279, height: 76, weight: 220, team_id: knicks_id, image_url: 'https://nba-players.herokuapp.com/players/world/metta'}
+]
+
 knicks.each do |player|
   Player.create(player)
 end
