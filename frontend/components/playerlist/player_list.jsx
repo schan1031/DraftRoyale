@@ -41,18 +41,25 @@ export default class PlayerList extends React.Component {
     } else {
       const p1 = this.props.players[Object.keys(this.props.players)[0]];
 
+      let draftPlayer = this.props.draftPlayer;
       const players = values(this.props.players);
       const myPlayers = values(this.props.myTeam);
       const fillers = 8-myPlayers.length;
+      const entrySub = 'post-entry';
+      
+
+      if (fillers === 0) {
+        draftPlayer = () => console.log('');
+      }
+
       for (let i = 0; i < fillers; i++) {
         myPlayers.push(
           {position: 'P', name: '-', ppg: 0, apg: 0, rpg: 0, image_url: 'http://shipinc.org/wp-content/themes/act-child/img/HeadShot%20Male%20Gray.png' }
         );
       }
-      console.log(myPlayers);
 
       const playerItems = players.map(
-        (player, idx) => <PlayerItem key={idx} player={player} draftPlayer={this.props.draftPlayer}/>
+        (player, idx) => <PlayerItem key={idx} player={player} draftPlayer={draftPlayer}/>
       );
 
       const myTeam = myPlayers.map(
@@ -93,6 +100,9 @@ export default class PlayerList extends React.Component {
             <ul className='my-team'>
               {myTeam}
             </ul>
+            <div>
+              <button className='post-entry'> Submit</button>
+            </div>
           </div>
         </div>
       );

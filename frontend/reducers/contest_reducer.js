@@ -2,13 +2,15 @@ import merge from 'lodash/merge';
 import { RECEIVE_ERRORS,
   RECEIVE_ALL_CONTESTS,
   RECEIVE_ONE_CONTEST,
-  RECEIVE_SCHEDULE
+  RECEIVE_SCHEDULE,
+  CHOOSE_CONTEST
 } from '../actions/contest_actions';
 
 const defaultState = {
   contests: {},
   contestErrors: [],
-  schedule: {}
+  schedule: {},
+  contestId: ''
 };
 
 const contestReducer = (state = defaultState, action) => {
@@ -28,6 +30,9 @@ const contestReducer = (state = defaultState, action) => {
     case RECEIVE_SCHEDULE:
       const schedule = action.schedule;
       return merge({}, state, { schedule });
+    case CHOOSE_CONTEST:
+      const contestId = action.contestId;
+      return Object.assign({}, state, { contestId });
     default:
       return state;
   }

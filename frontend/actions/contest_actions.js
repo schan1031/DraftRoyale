@@ -2,6 +2,7 @@ export const RECEIVE_ALL_CONTESTS = 'RECEIVE_CONTESTS';
 export const RECEIVE_ONE_CONTEST = 'RECEIVE_ONE_CONTEST';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 export const RECEIVE_SCHEDULE = 'RECEIVE_SCHEDULE';
+export const CHOOSE_CONTEST = 'CHOOSE_CONTEST';
 
 import * as APIUtil from '../util/contest_api_util';
 import { getSchedule } from '../util/schedule_api_util';
@@ -55,3 +56,8 @@ export const fetchSchedule = (date) => dispatch => (
     dateObj => dispatch(receiveSchedule(dateObj))
   )
 );
+
+export const chooseContest = (contestId) => ({
+  type: CHOOSE_CONTEST,
+  contestId
+});

@@ -20,7 +20,7 @@ export default class ContestLobby extends React.Component {
 
     const contests = values(this.props.contests);
     const contestItems = contests.map(
-      (contest, idx) => <ContestItem key={idx} contest={contest} fetchSchedule={this.props.fetchSchedule} />
+      (contest, idx) => <ContestItem key={idx} contest={contest} fetchSchedule={this.props.fetchSchedule} chooseContest={this.props.chooseContest} />
     );
 
     return(

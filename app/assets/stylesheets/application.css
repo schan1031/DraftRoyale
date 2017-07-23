@@ -18,6 +18,7 @@ body {
   /*background-image: url('http://hdwallpaper20.com/wp-content/uploads/2016/04/Basketball-wallpaper-HD-Collection-basketball-court-generic-ss-1920.jpg');*/
   /*background-image: url('http://wallpapercave.com/wp/ipQZEak.jpg');*/
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('http://sportsplex.phantomclubs.com/assets/images/basketball-floor.jpg');
+  background-size: cover;
   /*background-color: rgba(0,0,0,0.5)*/
   /*background-color: blue;*/
   margin: 0;

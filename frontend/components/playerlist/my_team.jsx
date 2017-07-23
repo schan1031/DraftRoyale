@@ -4,10 +4,19 @@ export default class MyTeam extends React.Component {
   constructor(props) {
     super(props);
     this.handleSwap = this.handleSwap.bind(this);
+    this.returnbutt = this.returnbutt.bind(this);
   }
 
   handleSwap() {
-    this.props.returnPlayer(this.props.player);
+    if (this.props.player.name !== '-') {
+      this.props.returnPlayer(this.props.player);
+    }
+  }
+
+  returnbutt() {
+    return(
+      <button onClick={this.handleSwap}>-</button>
+    );
   }
 
   render () {
