@@ -14,13 +14,24 @@ export default class MyTeam extends React.Component {
     const player = this.props.player;
     let fppg = player.ppg + player.apg*2 + player.rpg*1.2;
     fppg = Math.round(fppg*10)/10;
+    let wid = '';
+
+    if (player.image_url === 'http://shipinc.org/wp-content/themes/act-child/img/HeadShot%20Male%20Gray.png') {
+      wid = '70';
+    } else {
+      wid='100';
+    }
+
     return(
       <li className='player-info'>
+        <div className='drop-button'>
+          <button onClick={this.handleSwap}>-</button>
+        </div>
         <div className='player-position'>
           {player.position}
         </div>
         <div className='headshot'>
-          <img src={`${player.image_url}`} width='100' height='70'/>
+          <img src={`${player.image_url}`} width={wid} height='70'/>
         </div>
         <div className='player-name'>
           {player.name}
@@ -29,9 +40,6 @@ export default class MyTeam extends React.Component {
           <span className='stat'>
             {fppg}
           </span>
-        </div>
-        <div className='drop-button'>
-          <button onClick={this.handleSwap}>-</button>
         </div>
       </li>
     );

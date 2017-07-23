@@ -43,6 +43,14 @@ export default class PlayerList extends React.Component {
 
       const players = values(this.props.players);
       const myPlayers = values(this.props.myTeam);
+      const fillers = 8-myPlayers.length;
+      for (let i = 0; i < fillers; i++) {
+        myPlayers.push(
+          {position: 'P', name: '-', ppg: 0, apg: 0, rpg: 0, image_url: 'http://shipinc.org/wp-content/themes/act-child/img/HeadShot%20Male%20Gray.png' }
+        );
+      }
+      console.log(myPlayers);
+
       const playerItems = players.map(
         (player, idx) => <PlayerItem key={idx} player={player} draftPlayer={this.props.draftPlayer}/>
       );
