@@ -53,15 +53,23 @@ export default class PlayerList extends React.Component {
 
       console.log(p1);
       return (
-        <div>
-          Player List
-          <ul>
-            {playerItems}
-          </ul>
-          My Team
-          <ul>
-            {myTeam}
-          </ul>
+        <div className='draft-page'>
+          <div>
+            <h3>
+              Player List
+            </h3>
+            <ul className='draft-list'>
+              {playerItems}
+            </ul>
+          </div>
+          <div>
+            <h3>
+              My Team
+            </h3>
+            <ul className='my-team'>
+              {myTeam}
+            </ul>
+          </div>
         </div>
       );
     }

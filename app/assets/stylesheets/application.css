@@ -16,10 +16,15 @@
 
 body {
   background-image: url('http://hdwallpaper20.com/wp-content/uploads/2016/04/Basketball-wallpaper-HD-Collection-basketball-court-generic-ss-1920.jpg');
+  /*background-color: rgba(0,0,0,0.5)*/
   /*background-color: blue;*/
   margin: 0;
 }
 
 html, body, #root {
   height: 100%;
+}
+
+#root ul {
+  padding: 0;
 }

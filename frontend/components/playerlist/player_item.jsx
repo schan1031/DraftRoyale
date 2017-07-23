@@ -12,22 +12,34 @@ export default class PlayerItem extends React.Component {
 
   render() {
     const player = this.props.player;
-    console.log(player.image_url);
+    let fppg = player.ppg + player.apg*2 + player.rpg*1.2;
+    fppg = Math.round(fppg*10)/10;
     return(
-      <li>
+      <li className='player-info'>
+        <div className='player-position'>
+          {player.position}
+        </div>
         <div className='headshot'>
           <img src={`${player.image_url}`} width='100' height='70'/>
         </div>
         <div className='player-name'>
           {player.name}
         </div>
-        <div className='player-position'>
-          {player.position}
+        <div className='stats'>
+          <span className='stat'>
+            PPg: {player.ppg}
+          </span>
+          <span className='stat'>
+            APg:{player.apg}
+          </span>
+          <span className='stat'>
+            RPg:{player.rpg}
+          </span>
+          <span className='stat'>
+            FPPg:{fppg}
+          </span>
         </div>
-        <div className='height-weight'>
-          {player.height} / {player.weight}
-        </div>
-        <button onClick={this.handleSwap}>Draft</button>
+        <button className='draft-button' onClick={this.handleSwap}>Draft</button>
       </li>
     );
   }
