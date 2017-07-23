@@ -181,8 +181,14 @@ button {
 
 .post-entry:disabled {
   background-color: rgba(100,100,100,0.8);
+  cursor: not-allowed;
 }
 
 .post-entry:hover {
   transform: scale(1.05);
+}
+
+.post-entry:disabled:hover {
+  background-color: rgba(100,100,100,0.8);
+  transform: none;
 }

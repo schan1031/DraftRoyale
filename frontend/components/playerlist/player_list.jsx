@@ -2,6 +2,7 @@ import React from 'react';
 import { values } from 'lodash';
 import PlayerItem from './player_item';
 import MyTeam from './my_team';
+import { postEntry } from '../../util/entry_api_util';
 
 export default class PlayerList extends React.Component {
   constructor(props) {
@@ -33,7 +34,7 @@ export default class PlayerList extends React.Component {
   }
 
   handlSubmit() {
-    
+    const entry = {}
   }
 
   render() {
