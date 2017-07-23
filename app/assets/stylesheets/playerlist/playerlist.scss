@@ -178,3 +178,11 @@ button {
   background-color: rgba(100,200,100,1);
   border: none;
 }
+
+.post-entry:disabled {
+  background-color: rgba(100,100,100,0.8);
+}
+
+.post-entry:hover {
+  transform: scale(1.05);
+}

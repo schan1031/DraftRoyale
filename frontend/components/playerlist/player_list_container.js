@@ -5,7 +5,9 @@ import PlayerList from './player_list';
 const mapStateToProps = state => ({
   players: state.players.players,
   myTeam: state.players.myTeam,
-  schedule: state.contests.schedule
+  schedule: state.contests.schedule,
+  contestId: state.contests.contestId,
+  currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({

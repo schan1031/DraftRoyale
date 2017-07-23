@@ -32,6 +32,10 @@ export default class PlayerList extends React.Component {
     }
   }
 
+  handlSubmit() {
+    
+  }
+
   render() {
     console.log(this.props.players);
     if (Object.keys(this.props.players).length === 0 && Object.keys(this.props.myTeam).length === 0) {
@@ -45,11 +49,11 @@ export default class PlayerList extends React.Component {
       const players = values(this.props.players);
       const myPlayers = values(this.props.myTeam);
       const fillers = 8-myPlayers.length;
-      const entrySub = 'post-entry';
-      
+      let disabled = true;
 
       if (fillers === 0) {
         draftPlayer = () => console.log('');
+        disabled = false;
       }
 
       for (let i = 0; i < fillers; i++) {
@@ -101,7 +105,7 @@ export default class PlayerList extends React.Component {
               {myTeam}
             </ul>
             <div>
-              <button className='post-entry'> Submit</button>
+              <button className='post-entry' disabled={disabled}>Submit</button>
             </div>
           </div>
         </div>
