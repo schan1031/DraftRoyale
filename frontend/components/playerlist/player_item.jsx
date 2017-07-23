@@ -30,16 +30,18 @@ export default class PlayerItem extends React.Component {
             PPg: {player.ppg}
           </span>
           <span className='stat'>
-            APg:{player.apg}
+            APg: {player.apg}
           </span>
           <span className='stat'>
-            RPg:{player.rpg}
+            RPg: {player.rpg}
           </span>
           <span className='stat'>
-            FPPg:{fppg}
+            FPPg: {fppg}
           </span>
         </div>
-        <button className='draft-button' onClick={this.handleSwap}>Draft</button>
+        <div className='draft-button'>
+          <button onClick={this.handleSwap}>+</button>
+        </div>
       </li>
     );
   }

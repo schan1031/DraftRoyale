@@ -51,14 +51,15 @@ export default class PlayerList extends React.Component {
         (player, idx) => <MyTeam key={idx} player={player} returnPlayer={this.props.returnPlayer} />
       );
 
-      console.log(p1);
       return (
         <div className='draft-page'>
           <div>
-            <h3>
-              Player List
-            </h3>
             <ul className='draft-list'>
+              <li className='player-info'>
+                <div className='list-title'>
+                  Player List
+                </div>
+              </li>
               {playerItems}
             </ul>
           </div>
