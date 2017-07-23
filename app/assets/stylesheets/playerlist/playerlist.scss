@@ -1,5 +1,8 @@
 $greyback: #dee2e8;
 
+button {
+  outline: none;
+}
 
 .draft-page {
   display: flex;
@@ -14,6 +17,7 @@ $greyback: #dee2e8;
 .draft-list {
   max-height: 770px;
   width: 600px;
+  margin: 0;
   overflow-y: auto;
   background-color: rgba(0,0,0,0.25);
   list-style-type: none;
@@ -23,7 +27,7 @@ $greyback: #dee2e8;
   max-height: 85vh;
   width: 500px;
   overflow-y: auto;
-  background-color: #dee2e8;
+  background-color: rgba(0,0,0,0.25);
   list-style-type: none;
 }
 
@@ -86,6 +90,14 @@ $greyback: #dee2e8;
   cursor: pointer;
 }
 
+.draft-button > button:hover {
+  transform: scale(1.1);
+}
+
+.drop-button > button:hover {
+  transform: scale(1.1);
+}
+
 .drop-button {
   display: flex;
   justify-content: center;
@@ -103,8 +115,41 @@ $greyback: #dee2e8;
   cursor: pointer;
 }
 
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .list-title {
+  display: flex;
+  font-size: 12px;
+  width: 590px;
   padding: 15px;
-  font-size: 24px;
-  background-color: blue;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: rgba(0,0,0,0.25);
+  font-weight: 900;
+  color: #F28400;
+}
+
+.posheader {
+  min-width: 215px;
+}
+
+.nameheader {
+  min-width: 120px;
+}
+
+.ppgheader {
+  min-width: 57px;
+}
+
+.apgheader {
+  min-width: 54px;
+}
+
+.rpgheader{
+  min-width: 50px;
 }

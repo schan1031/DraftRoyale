@@ -53,18 +53,35 @@ export default class PlayerList extends React.Component {
 
       return (
         <div className='draft-page'>
-          <div>
+          <div className='section'>
             <div className='list-title'>
-              Player List
+              <div className='posheader'>
+                {'POS'}
+              </div>
+              <div className='nameheader'>
+                Name
+              </div>
+              <div className='ppgheader'>
+                {'PPG'}
+              </div>
+              <div className='apgheader'>
+                {'APG'}
+              </div>
+              <div className='rpgheader'>
+                {'RPG'}
+              </div>
+              <div className='fppgheader'>
+                {'FPPG'}
+              </div>
             </div>
             <ul className='draft-list'>
               {playerItems}
             </ul>
           </div>
-          <div>
-            <h3>
+          <div className='section'>
+            <div className='list-title'>
               My Team
-            </h3>
+            </div>
             <ul className='my-team'>
               {myTeam}
             </ul>

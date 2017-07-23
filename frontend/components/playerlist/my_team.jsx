@@ -27,7 +27,7 @@ export default class MyTeam extends React.Component {
         </div>
         <div className='stats-myteam'>
           <span className='stat'>
-            FPPg: {fppg}
+            {fppg}
           </span>
         </div>
         <div className='drop-button'>
