@@ -3,10 +3,12 @@ import { values } from 'lodash';
 import PlayerItem from './player_item';
 import MyTeam from './my_team';
 import { postEntry } from '../../util/entry_api_util';
+import { Link } from 'react-router-dom';
 
 export default class PlayerList extends React.Component {
   constructor(props) {
     super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidUpdate(prevProps) {
@@ -33,8 +35,20 @@ export default class PlayerList extends React.Component {
     }
   }
 
-  handlSubmit() {
-    const entry = {}
+  handleSubmit() {
+    const myTeam = this.props.myTeam;
+    const keys = Object.keys(myTeam);
+    const entry = { contest_id: this.props.contestId,
+      p_one: myTeam[keys[0]].id,
+      p_two: myTeam[keys[1]].id,
+      p_three: myTeam[keys[2]].id,
+      p_four: myTeam[keys[3]].id,
+      p_five: myTeam[keys[4]].id,
+      p_six: myTeam[keys[5]].id,
+      p_seven: myTeam[keys[6]].id,
+      p_eight: myTeam[keys[7]].id,
+    };
+    postEntry(entry);
   }
 
   render() {
@@ -106,7 +120,9 @@ export default class PlayerList extends React.Component {
               {myTeam}
             </ul>
             <div>
-              <button className='post-entry' disabled={disabled}>Submit</button>
+              <Link to='/dashboard'>
+                <button className='post-entry' disabled={disabled} onClick={this.handleSubmit}>Submit</button>
+              </Link>
             </div>
           </div>
         </div>

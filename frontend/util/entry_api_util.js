@@ -1,7 +1,7 @@
 export const postEntry = entry => (
   $.ajax({
     method: 'POST',
-    url: '/api/contests',
+    url: '/api/entries',
     data: {entry}
   })
 );
