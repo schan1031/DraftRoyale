@@ -30,8 +30,8 @@ export default class MyTeam extends React.Component {
             FPPg: {fppg}
           </span>
         </div>
-        <div className='draft-button'>
-          <button onClick={this.handleSwap}>+</button>
+        <div className='drop-button'>
+          <button onClick={this.handleSwap}>-</button>
         </div>
       </li>
     );

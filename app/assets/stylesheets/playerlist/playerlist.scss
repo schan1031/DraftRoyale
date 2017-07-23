@@ -1,21 +1,27 @@
+$greyback: #dee2e8;
+
+
 .draft-page {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   padding-top: 20px;
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  // border: 1px
 }
 
 .draft-list {
   max-height: 770px;
   width: 600px;
   overflow-y: auto;
-  background-color: #dee2e8;
+  background-color: rgba(0,0,0,0.25);
   list-style-type: none;
 }
 
 .my-team {
   max-height: 85vh;
-  width: 400px;
+  width: 500px;
   overflow-y: auto;
   background-color: #dee2e8;
   list-style-type: none;
@@ -25,7 +31,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border: 1px solid black;
+  // border: 1px solid black;
   padding: 5px;
 }
 
@@ -43,21 +49,21 @@
   align-items: center;
 }
 
-.stats {
+.stat {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  min-width: 140px;
-  max-width: 140px;
+  min-width: 38px;
+  max-width: 38px;
   justify-content: space-around;
   align-items: center;
 }
 
-.stats {
+.stats-myteam {
   display: flex;
   flex-direction: row;
   // flex-wrap: wrap;
-  // min-width: ;
+  min-width: 100px;
   // max-width: 140px;
   justify-content: center;
   align-items: center;
@@ -72,8 +78,27 @@
 .draft-button > button {
   background-color: transparent;
   border-radius: 15px;
-  border: 2px green solid;
-  color: green;
+  height: 25px;
+  width: 25px;
+  border: 2px #F28400 solid;
+  color: #F28400;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.drop-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.drop-button > button {
+  background-color: transparent;
+  border-radius: 15px;
+  height: 25px;
+  width: 25px;
+  border: 2px red solid;
+  color: red;
   font-weight: bold;
   cursor: pointer;
 }
@@ -81,4 +106,5 @@
 .list-title {
   padding: 15px;
   font-size: 24px;
+  background-color: blue;
 }

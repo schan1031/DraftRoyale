@@ -9,11 +9,12 @@
 
 .list-table {
   box-shadow: 3px 3px black;
-  font-family: 'Athiti', sans-serif;
   color: white;
   background-color: #094a68;
   border-radius: 10px;
   overflow-y: scroll;
+  font-family: 'Athiti', sans-serif;
+  // font-family: 'Exo', sans-serif;
 }
 
 .table--fixed tbody tr:nth-child(odd){
@@ -70,12 +71,13 @@ td {
 th, td {
   /*text-align: left;*/
   padding: 10px;
-  font-weight: bold;
+  // font-weight: bold;
 }
 
 th {
   font-size: 20px;
   text-align: left;
+  font-weight: bold;
   /*border-bottom: 1px solid #cee1ff;*/
 }
 
