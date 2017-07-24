@@ -191,4 +191,4 @@ for i in 0..29
 end
 
 p1 = Player.find_by_name('Carmelo Anthony')
-e1 = Entry.create(user_id: 47, contest_id: Schedule.last.id, p_one: p1.id, p_two: p1.id+1, p_three: p1.id+2, p_four: p1.id+3, p_five: p1.id+4, p_six: p1.id+5, p_seven: p1.id+6, p_eight: p1.id+7)
+# e1 = Entry.create(user_id: u2.id, contest_id: Schedule.last.id, p_one: p1.id, p_two: p1.id+1, p_three: p1.id+2, p_four: p1.id+3, p_five: p1.id+4, p_six: p1.id+5, p_seven: p1.id+6, p_eight: p1.id+7)
