@@ -113,9 +113,6 @@ export default class PlayerList extends React.Component {
             </ul>
           </div>
           <div className='section'>
-            <div className='list-title'>
-              My Team
-            </div>
             <ul className='my-team'>
               {myTeam}
             </ul>

@@ -21,7 +21,6 @@ class Entry < ApplicationRecord
   validates :user_id, :contest_id, presence: true
   validates :user_id, uniqueness: { scope: :contest_id,
     message: 'Cannot enter the same contest multiple times' }
-
   validates :p_one, :p_two,
     :p_three, :p_four,
     :p_five, :p_six,
