@@ -38,17 +38,16 @@ $testlightblue: #3C9ABE;
 }
 
 .nav-button {
-  color: white;
+  // color: white;
+  border: 2px black solid;
   font-weight: bold;
   font-size: 18px;
   font-family: 'Athiti', sans-serif;
   background-color: transparent;
-  border: none;
   padding-left: 25px;
   padding-right: 25px;
   padding-top: 5px;
   padding-bottom: 5px;
-  border: 2px white solid;
   border-radius: 5px;
   margin: 10px;
   // font-weight: bold;
@@ -57,8 +56,8 @@ $testlightblue: #3C9ABE;
 }
 .nav-button:hover {
   transform: scale(1.1);
-  color: white;
-  box-shadow: 2px 2px brown;
+  // color: white;
+  // box-shadow: 2px 2px brown;
 }
 
 .right-nav {

@@ -100,12 +100,12 @@ class SessionForm extends React.Component {
 
         <div className='input-field'>
           <span>Username</span>
-          <input type='text' value={this.state.username} onChange={this.updateUsername}/>
+          <input className='session-input' type='text' value={this.state.username} onChange={this.updateUsername}/>
         </div>
 
         <div className='input-field'>
           <span>Password</span>
-          <input type='password' value={this.state.password} onChange={this.updatePassword}/>
+          <input className='session-input' type='password' value={this.state.password} onChange={this.updatePassword}/>
         </div>
 
         <div className='session-buttons'>

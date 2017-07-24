@@ -8,6 +8,8 @@
 //   justify-content: center;
 // }
 
+$prevblue: #094a68;
+
 .login-modal {
   // border: 2px black solid;
   outline: none;
@@ -29,7 +31,7 @@
 }
 
 .ReactModal__Overlay--after-open {
-  opacity: 0.9;
+  opacity: 1;
   transition: opacity 200ms ease-out;
 }
 
@@ -50,19 +52,28 @@
   align-items: center;
   justify-content: flex-start;
   height: 380px;
-  width: 320px;
+  width: 280px;
   font-size: 18px;
-  font-family: 'Athiti', sans-serif;
-  background-color: #094a68;
-  color: white;
-  font-weight: bold;
+  font-family: Helvetica, Arial, sans-serif;
+  // background-color: black;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://i.stack.imgur.com/MtKUX.jpg');
+  color: black;
+  // font-weight: bold;
   border-radius: 10px;
-  box-shadow: 3px 3px black;
+}
+
+.session-input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px black solid;
+  outline: none;
+  font-family: Helvetica, Arial, sans-serif;
+  padding-top: 5px;
 }
 
 .session-form > h2 {
-  font-family: 'Athiti', sans-serif;
-  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  color: black;
   margin-bottom: 20;
 }
 
@@ -90,56 +101,47 @@
   text-align: center;
 }
 
-.error {
-  color: red;
-  margin: auto;
-}
-
 .session-buttons > button {
   height: 40px;
   width: 100px;
-  color: white;
-  font-weight: bold;
-  font-family: 'Athiti', sans-serif;
+  color: black;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 18px;
-  background-color: #094a68;
-  border: 2px white solid;
+  background-color: transparent;
+  border: 2px black solid;
   text-align: center;
   cursor: pointer;
 }
 
 .signup-button {
   border-top-left-radius: 10px;
-  // border-bottom-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin-bottom: 15px;
 }
 
 .login-button {
   border-top-right-radius: 10px;
-  // border-bottom-right-radius: 10px;
-}
-
-input {
-  border-radius: 5px;
+  border-bottom-right-radius: 10px;
 }
 
 .error {
   list-style-type: none;
   font-size: 14px;
+  color: red;
+  margin: auto;
 }
 
 .demologin-button {
   height: 40px;
   width: 200px;
-  color: white;
-  font-weight: bold;
-  font-family: 'Athiti', sans-serif;
+  color: black;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 18px;
-  background-color: #094a68;
-  border: 2px white solid;
+  background-color: transparent;
+  border: 2px black solid;
   text-align: center;
   cursor: pointer;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-radius: 10px;
 }
 
 ul {
