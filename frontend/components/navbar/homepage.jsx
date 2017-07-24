@@ -16,13 +16,22 @@ export default class Homepage extends React.Component {
         </div>
         <div className='sub-info'>
           <div className='info-box'>
-            Enhance your NBA experience.
+            <img className='info-img' alt="Icon" src="/assets/jumpman" height='150' width='150'/>
+            <span className='info-text'>
+              Enhance your NBA experience.
+            </span>
           </div>
           <div className='info-box'>
-            Play against friends.
+            <img className='info-img' alt="Icon" src="/assets/users" height='150' width='150'/>
+            <span className='info-text'>
+              Play against friends.
+            </span>
           </div>
           <div className='info-box'>
-            Earn points.
+            <img className='info-img' alt="Icon" src="/assets/coins" height='150' width='150'/>
+            <span className='info-text'>
+              Earn points and prizes!
+            </span>
           </div>
         </div>
       </div>

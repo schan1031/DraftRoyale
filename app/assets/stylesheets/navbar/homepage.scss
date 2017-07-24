@@ -12,6 +12,25 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  font-family: 'Fugaz One', cursive;
+  font-size: 30px;
+}
+
+.start-button {
+  width: 300px;
+  height: 10%;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: rgba(100,200,100,0.7);
+  color: white;
+  border-radius: 10px;
+}
+
+.start-button:hover {
+  transform: scale(1.05)
 }
 
 .sub-info {
@@ -22,6 +41,7 @@
 
 .info-box {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 25vw;
@@ -29,4 +49,9 @@
 
   // background: rgba(0,0,0,0.3);
   // border: 1px rgba(100,100,100,0.3) solid;
+}
+
+.info-img {
+  filter: invert(100%);
+  padding-bottom: 20px;
 }
