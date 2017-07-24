@@ -1,0 +1,32 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Helvetica, Arial, sans-serif;
+
+}
+
+.main-page {
+  color: white;
+  height: 55vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sub-info {
+  color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.info-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25vw;
+  height: 30vh;
+
+  // background: rgba(0,0,0,0.3);
+  // border: 1px rgba(100,100,100,0.3) solid;
+}

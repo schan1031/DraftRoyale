@@ -1,12 +1,16 @@
 $bluehead: #094a68;
+$testgold: #F1C034;
+$testlightblue: #3C9ABE;
 
 .header {
   display: flex;
   justify-content: center;
   align-content: center;
-  height: 50px;
+  height: 80px;
+  // border-bottom: 3px brown solid;
   top: 0;
-  background-color: #C6996E;
+  // background-color: #C6996E;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('http://blogule.com/wp-content/uploads/2016/07/wood-basketball-floor-graphic-basketball-floor-background-floor-basketball-floor-1024x671.jpg');
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
@@ -22,30 +26,39 @@ $bluehead: #094a68;
 }
 
 .title {
-  font-size: 24px;
+  font-size: 30px;
   font-family: 'Fugaz One', cursive;
   background-color: transparent;
   border: none;
   font-weight: bold;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: white;
+  color: black;
+  // -webkit-text-stroke-width: 2px;
+  // -webkit-text-stroke-color: white;
   cursor: pointer;
 }
 
 .nav-button {
   color: white;
+  font-weight: bold;
   font-size: 18px;
   font-family: 'Athiti', sans-serif;
   background-color: transparent;
   border: none;
-  padding-left: 50px;
-  font-weight: bold;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 2px white solid;
+  border-radius: 5px;
+  margin: 10px;
+  // font-weight: bold;
   cursor: pointer;
   outline: none;
 }
 .nav-button:hover {
   transform: scale(1.1);
   color: gray;
+  box-shadow: 2px 2px brown;
 }
 
 .right-nav {

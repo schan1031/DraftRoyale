@@ -47,7 +47,9 @@ export default class NavBar extends React.Component {
     } else {
       return (
         <div>
-          <button className='nav-button' onClick={this.handleLogout}>Log Out</button>
+          <Link to='/'>
+            <button className='nav-button' onClick={this.handleLogout}>Log Out</button>
+          </Link>
         </div>
       );
     }
