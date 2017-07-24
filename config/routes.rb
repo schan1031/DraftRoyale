@@ -8,6 +8,6 @@ Rails.application.routes.draw do
     resources :contests, only: [:index, :create, :show, :delete]
     resources :players, only: [:index, :show]
     resources :schedule, only: [:index, :show]
-    resources :entries, only: [:create, :show]
+    resources :entries, only: [:create, :show, :index]
   end
 end

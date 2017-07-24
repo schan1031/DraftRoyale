@@ -31,7 +31,6 @@ export default class PlayerList extends React.Component {
       this.props.fetchPlayers({
         team_ids: out
       });
-      console.log(out);
     }
   }
 

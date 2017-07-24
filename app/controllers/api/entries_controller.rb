@@ -1,5 +1,10 @@
 class Api::EntriesController < ApplicationController
 
+  def index
+    @entries = Entry.where(user_id: current_user.id)
+    render :index
+  end
+
   def show
     @entry = Entry.find(params[:id])
     render :show

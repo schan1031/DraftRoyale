@@ -164,12 +164,20 @@ bulls.each do |player|
   Player.create(player)
 end
 
+celtics.each do |player|
+  Player.create(player)
+end
+
+lakers.each do |player|
+  Player.create(player)
+end
+
 for i in 0..8
   Schedule.create(date: Date.new(2017, 7, 23+i), home_id: knicks_id, away_id: nets_id)
   Schedule.create(date: Date.new(2017, 7, 23+i), home_id: celtics_id, away_id: lakers_id)
 end
 
 for i in 0..29
-  Schedule.create(date: Date.new(2017, 8, 1+i), home_id: bulls, away_id: lakers_id)
+  Schedule.create(date: Date.new(2017, 8, 1+i), home_id: bulls_id, away_id: lakers_id)
   Schedule.create(date: Date.new(2017, 8, 1+i), home_id: celtics_id, away_id: knicks_id)
 end
