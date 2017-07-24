@@ -57,6 +57,14 @@ for i in 0..25
   )
 end
 
+Contest.create(creator_id: u1.id,
+  max_contestants: 20,
+  point_value: 10,
+  name: 'FINAL TEST',
+  contest_date: Date.new(2017,7,1),
+  status: true
+)
+
 
 knicks = [
   {name: 'Carmelo Anthony', position: 'PF', ppg: 22.4, apg: 2.9, rpg: 5.9, spg: 0.8, bpg: 0.5, ft: 0.833, fg: 0.433, height: 80, weight: 240, team_id: knicks_id, image_url: 'https://nba-players.herokuapp.com/players/anthony/carmelo'},
@@ -172,12 +180,15 @@ lakers.each do |player|
   Player.create(player)
 end
 
-for i in 0..8
-  Schedule.create(date: Date.new(2017, 7, 23+i), home_id: knicks_id, away_id: nets_id)
-  Schedule.create(date: Date.new(2017, 7, 23+i), home_id: celtics_id, away_id: lakers_id)
+for i in 0..30
+  Schedule.create(date: Date.new(2017, 7, 1 + i), home_id: knicks_id, away_id: nets_id)
+  Schedule.create(date: Date.new(2017, 7, 1 + i), home_id: celtics_id, away_id: lakers_id)
 end
 
 for i in 0..29
   Schedule.create(date: Date.new(2017, 8, 1+i), home_id: bulls_id, away_id: lakers_id)
   Schedule.create(date: Date.new(2017, 8, 1+i), home_id: celtics_id, away_id: knicks_id)
 end
+
+p1 = Player.find_by_name('Carmelo Anthony')
+e1 = Entry.create(user_id: 47, contest_id: Schedule.last.id, p_one: p1.id, p_two: p1.id+1, p_three: p1.id+2, p_four: p1.id+3, p_five: p1.id+4, p_six: p1.id+5, p_seven: p1.id+6, p_eight: p1.id+7)

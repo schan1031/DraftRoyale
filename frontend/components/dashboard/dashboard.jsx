@@ -31,16 +31,22 @@ export default class PlayerList extends React.Component {
     );
 
     const pastItems = past.map(
-      (entry, idx) => <PastContes tkey={idx} entry={entry}/>
+      (entry, idx) => <PastContest key={idx} entry={entry}/>
     );
 
     return (
       <div className='dashboard'>
         <div>
-          {upcomingItems}
+          Upcoming
+          <ul>
+            {upcomingItems}
+          </ul>
         </div>
         <div>
-          {pastItems}
+          Past
+          <ul>
+            {pastItems}
+          </ul>
         </div>
       </div>
     );
