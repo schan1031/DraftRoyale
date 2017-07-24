@@ -29,4 +29,44 @@ class Player < ApplicationRecord
     foreign_key: :team_id,
     class_name: :Team
 
+  has_one :entry,
+    primary_key: :id,
+    foreign_key: :p_one,
+    class_name: :Entry
+
+  has_one :entry,
+    primary_key: :id,
+    foreign_key: :p_two,
+    class_name: :Entry
+
+  has_one :entry,
+    primary_key: :id,
+    foreign_key: :p_three,
+    class_name: :Entry
+
+  has_one :entry,
+    primary_key: :id,
+    foreign_key: :p_four,
+    class_name: :Entry
+
+  has_one :entry,
+    primary_key: :id,
+    foreign_key: :p_five,
+    class_name: :Entry
+
+  has_one :entry,
+    primary_key: :id,
+    foreign_key: :p_six,
+    class_name: :Entry
+
+  has_one :entry,
+    primary_key: :id,
+    foreign_key: :p_seven,
+    class_name: :Entry
+
+  has_one :entry,
+    primary_key: :id,
+    foreign_key: :p_eight,
+    class_name: :Entry
+
 end

@@ -6,6 +6,7 @@ import NavBarContainer from './navbar/navbar_container';
 import ContestFormContainer from './contest/contest_form_container';
 import ContestLobbyContainer from './contest/contest_lobby_container';
 import PlayerListContainer from './playerlist/player_list_container';
+import DashboardContainer from './dashboard/dashboard_container';
 
 const App = () => (
   <div>
@@ -16,6 +17,7 @@ const App = () => (
     <Route path='/createcontest' component={ContestFormContainer} />
     <Route path='/lobby' component={ContestLobbyContainer} />
     <Route path='/contest/draft/' component={PlayerListContainer} />
+    <Route path='/dashboard' component={DashboardContainer} />
   </div>
 );
 

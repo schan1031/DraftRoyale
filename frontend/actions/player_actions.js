@@ -26,14 +26,3 @@ export const returnPlayer = player => ({
   type: RETURN_PLAYER,
   player
 });
-
-// export const receiveEntry = entry => ({
-//   type: ENTER_CONTEST,
-//   entry
-// });
-//
-// export const submitEntry = entry => dispatch => (
-//   EntryUtil.postEntry(entry).then(
-//     entryObj => dispatch(receiveEntry(entry))
-//   )
-// );

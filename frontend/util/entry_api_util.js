@@ -5,3 +5,10 @@ export const postEntry = entry => (
     data: {entry}
   })
 );
+
+export const getEntries = () => (
+  $.ajax({
+    method: 'GET',
+    url: '/api/entries'
+  })
+);

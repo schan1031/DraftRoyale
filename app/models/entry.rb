@@ -36,4 +36,43 @@ class Entry < ApplicationRecord
     foreign_key: :contest_id,
     class_name: :Contest
 
+  belongs_to :playone,
+    primary_key: :id,
+    foreign_key: :p_one,
+    class_name: :Player
+
+  belongs_to :playtwo,
+    primary_key: :id,
+    foreign_key: :p_two,
+    class_name: :Player
+
+  belongs_to :playthree,
+    primary_key: :id,
+    foreign_key: :p_three,
+    class_name: :Player
+
+  belongs_to :playfour,
+    primary_key: :id,
+    foreign_key: :p_four,
+    class_name: :Player
+
+  belongs_to :playfive,
+    primary_key: :id,
+    foreign_key: :p_five,
+    class_name: :Player
+
+  belongs_to :playsix,
+    primary_key: :id,
+    foreign_key: :p_six,
+    class_name: :Player
+
+  belongs_to :playseven,
+    primary_key: :id,
+    foreign_key: :p_seven,
+    class_name: :Player
+
+  belongs_to :playeight,
+    primary_key: :id,
+    foreign_key: :p_eight,
+    class_name: :Player
 end
