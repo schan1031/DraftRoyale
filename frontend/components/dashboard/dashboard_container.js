@@ -3,9 +3,7 @@ import { fetchEntries } from '../../actions/dashboard_actions';
 import Dashboard from './dashboard';
 
 const mapStateToProps = state => ({
-  allEntries: state.dashboard.allEntries,
-  pastEntries: state.dashboard.pastEntries,
-  upcomingEntries: state.dashboard.upcomingEntries
+  allEntries: state.dashboard.allEntries
 });
 
 const mapDispatchToProps = dispatch => ({

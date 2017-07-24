@@ -2,9 +2,7 @@ import merge from 'lodash/merge';
 import { RECEIVE_ENTRIES } from '../actions/dashboard_actions';
 
 const defaultState = {
-  allEntries: {},
-  pastEntries: [],
-  upcomingEntries: []
+  allEntries: {}
 };
 
 const dashboardReducer = (state = {}, action) => {

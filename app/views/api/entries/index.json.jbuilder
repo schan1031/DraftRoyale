@@ -1,6 +1,6 @@
 @entries.each do |entry|
   json.set! entry.id do
-    json.contest entry.contest, :name, :point_value, :max_contestants, :status
+    json.contest entry.contest, :name, :point_value, :max_contestants, :contest_date, :status
     json.p1 entry.playone
     json.p2 entry.playtwo
     json.p3 entry.playthree

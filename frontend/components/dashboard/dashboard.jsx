@@ -36,14 +36,18 @@ export default class PlayerList extends React.Component {
 
     return (
       <div className='dashboard'>
-        <div>
-          Upcoming
+        <div className='upcoming'>
+          <div className='dashboard-title'>
+            Upcoming
+          </div>
           <ul>
             {upcomingItems}
           </ul>
         </div>
-        <div>
-          Past
+        <div className='past'>
+          <div className='dashboard-title'>
+            Past
+          </div>
           <ul>
             {pastItems}
           </ul>
