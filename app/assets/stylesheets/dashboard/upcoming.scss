@@ -44,12 +44,17 @@
 .dashboard-title {
   margin-left: 151  px;
   padding-bottom: 25px;
-  padding-top: 40px;
+  padding-top: 30px;
   list-style-type: none;
   font-size: 24px;
 }
 
 .up-items {
+  max-height: 312px;
+  overflow-y: auto;
+}
+
+.past-items {
   max-height: 312px;
   overflow-y: auto;
 }

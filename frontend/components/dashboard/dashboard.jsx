@@ -65,7 +65,7 @@ export default class PlayerList extends React.Component {
             <li className='dashboard-title'>
               Past
             </li>
-            <div>
+            <div className='past-items'>
               {pastItems}
             </div>
           </ul>
