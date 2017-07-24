@@ -19,7 +19,15 @@ export default class PastContest extends React.Component {
 
     return(
       <li className='upcoming-contest'>
+        <div className='dashboard-contest-info'>
+          <span>{ contest.name }</span>
+          <span>{ contest.contest_date }</span>
+        </div>
         {portraits}
+        <div className='dashboard-contest-info'>
+          <span>{ contest.max_contestants } Contestants</span>
+          <span>{ contest.point_value } Points</span>
+        </div>
       </li>
     );
   }

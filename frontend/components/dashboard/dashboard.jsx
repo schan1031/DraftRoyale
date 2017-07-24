@@ -12,6 +12,18 @@ export default class PlayerList extends React.Component {
     this.props.fetchEntries();
   }
 
+  componentDidUpdate(prevProps) {
+    console.log('DIDUPDATE');
+    console.log(this.props.allEntries);
+    console.log(prevProps.allEntries);
+    if (this.props.allEntries) {
+      // if (this.props.allEntries.keys !== prevProps.allEntries.keys) {
+      //   console.log('REFETCH');
+      //   this.props.fetchEntries();
+      // }
+    }
+  }
+
   render() {
 
     const entries = values(this.props.allEntries);
@@ -36,22 +48,29 @@ export default class PlayerList extends React.Component {
 
     return (
       <div className='dashboard'>
+
         <div className='upcoming'>
-          <div className='dashboard-title'>
-            Upcoming
-          </div>
           <ul>
-            {upcomingItems}
+            <li className='dashboard-title'>
+              Upcoming
+            </li>
+            <div className='up-items'>
+              {upcomingItems}
+            </div>
           </ul>
         </div>
+
         <div className='past'>
-          <div className='dashboard-title'>
-            Past
-          </div>
           <ul>
-            {pastItems}
+            <li className='dashboard-title'>
+              Past
+            </li>
+            <div>
+              {pastItems}
+            </div>
           </ul>
         </div>
+
       </div>
     );
   }
