@@ -15,8 +15,8 @@ export default class NavBar extends React.Component {
   }
 
   handleLogout() {
-    this.props.logout();
     this.setState({ showModal: false });
+    this.props.logout();
   }
 
   handleOpenModal() {
@@ -47,6 +47,15 @@ export default class NavBar extends React.Component {
     } else {
       return (
         <div>
+          <Link to='/dashboard'>
+            <button className='nav-button'>Dashboard</button>
+          </Link>
+          <Link to='/lobby'>
+            <button className='nav-button'>Lobby</button>
+          </Link>
+          <Link to='/createcontest'>
+            <button className='nav-button'>Create a Contest</button>
+          </Link>
           <Link to='/'>
             <button className='nav-button' onClick={this.handleLogout}>Log Out</button>
           </Link>
@@ -68,15 +77,7 @@ export default class NavBar extends React.Component {
         </div>
 
         <div className='right-nav'>
-          <Link to='/dashboard'>
-            <button className='nav-button'>Dashboard</button>
-          </Link>
-          <Link to='/lobby'>
-            <button className='nav-button'>Lobby</button>
-          </Link>
-          <Link to='/createcontest'>
-            <button className='nav-button'>Create a Contest</button>
-          </Link>
+
 
           {this.loginOrProfile()}
 
