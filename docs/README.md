@@ -7,7 +7,7 @@ DraftRoyale is a DraftKings/Yahoo Daily Fantasy inspired app with a Rails backen
 - Hosted on Heroku
 - Production README
 - Account Creation/Demo Login
-- Profile/Contest History
+- Dashboard/Contest History
 - Contest Lobby
 - Creation of Contests
 - Enter Contests through Draft
@@ -38,7 +38,6 @@ DraftRoyale is a DraftKings/Yahoo Daily Fantasy inspired app with a Rails backen
 **Objectives:**
 - Properly enter users into contests.
 - Draft player list/My team interface functioning.
-- Buttons to filter players
 
 ### Phase 4: Dashboard (1 Day)
 
@@ -47,13 +46,13 @@ DraftRoyale is a DraftKings/Yahoo Daily Fantasy inspired app with a Rails backen
 - List completed contests.
 - Add some personal statistics.
 
-### Phase 5: Profile (1 Day)
+### Phase 5: Contest History (1 Day)
 
 **Objectives**
 
-- Biography, user points displayed.
-- User contest statistics, point graph.
+- Upcoming contests.
 - Full contest history displayed.
+- UI Cleanup.
 
 ### Bonus
 
