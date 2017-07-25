@@ -4,7 +4,11 @@ class Api::ContestsController < ApplicationController
     current_user.entered_contests.each do |contest|
       ids.push(contest.id)
     end
-    @contests = Contest.where('id NOT IN (?)', ids)
+    if ids.length > 0
+      @contests = Contest.where('id NOT IN (?)', ids)
+    else
+      @contests = Contest.all
+    end
     render :index
   end
 
