@@ -2,7 +2,7 @@
 
 An experience to enhance your NBA experience.
 
-[DraftRoyale](https://draftroyale.herokuapp.com/ 'DraftRoyale Homepage')
+[DraftRoyale](www.draftroyale.co 'DraftRoyale Homepage')
 
 ## Features
 
