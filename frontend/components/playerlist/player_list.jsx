@@ -2,7 +2,7 @@ import React from 'react';
 import { values } from 'lodash';
 import PlayerItem from './player_item';
 import MyTeam from './my_team';
-import { postEntry } from '../../util/entry_api_util';
+// import { postEntry } from '../../util/entry_api_util';
 import { Link } from 'react-router-dom';
 
 export default class PlayerList extends React.Component {
@@ -47,7 +47,7 @@ export default class PlayerList extends React.Component {
       p_seven: myTeam[keys[6]].id,
       p_eight: myTeam[keys[7]].id,
     };
-    postEntry(entry);
+    this.props.submitEntry(entry);
   }
 
   render() {

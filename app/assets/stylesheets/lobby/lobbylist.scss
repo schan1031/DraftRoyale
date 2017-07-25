@@ -1,3 +1,6 @@
+$testblue: #142c49;
+$testbluetwo: #094a68;
+
 .lobby-list {
   display: flex;
   justify-content: center;
@@ -8,22 +11,20 @@
 }
 
 .list-table {
-  box-shadow: 3px 3px black;
   color: white;
-  background-color: #094a68;
+  background-color: rgba(0,0,0,0.5);
   border-radius: 10px;
   overflow-y: scroll;
-  font-family: 'Athiti', sans-serif;
-  // font-family: 'Exo', sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 .table--fixed tbody tr:nth-child(odd){
-  background-color: #142c49;
+  background-color: rgba(100,100,100,0.4);
   /*border: 10px #142c49 solid;*/
 }
 
 .table--fixed tr:nth-child(odd)>td {
-  outline: 2px #142c49 solid;
+  outline: 1px rgba(100,100,100,0.4) solid;
 }
 
 .table--fixed {
@@ -75,26 +76,25 @@ th, td {
 }
 
 th {
-  font-size: 20px;
+  font-size: 16px;
   text-align: left;
-  font-weight: bold;
   /*border-bottom: 1px solid #cee1ff;*/
 }
 
 .cn {
-  width: 23.5%
+  width: 23.8%
 }
 
 .pv {
-  width: 14%;
+  width: 14.5%;
 }
 
 .mc {
-  width: 14%;
+  width: 14.5%;
 }
 
 .pp {
-  width: 14%;
+  width: 14.5%;
 }
 
 .cd {
@@ -102,7 +102,7 @@ th {
 }
 
 .empty {
-  width: 10%
+  width: 8.8%
 }
 
 .enter-contest {

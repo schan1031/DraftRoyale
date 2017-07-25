@@ -51,14 +51,12 @@ $prevblue: #094a68;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  height: 380px;
+  height: 420px;
   width: 280px;
   font-size: 18px;
   font-family: Helvetica, Arial, sans-serif;
-  // background-color: black;
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://i.stack.imgur.com/MtKUX.jpg');
   color: black;
-  // font-weight: bold;
   border-radius: 10px;
 }
 
@@ -101,6 +99,11 @@ $prevblue: #094a68;
   text-align: center;
 }
 
+.errors {
+  height: 48px;
+  padding-bottom: 10px;
+}
+
 .session-buttons > button {
   height: 40px;
   width: 100px;
@@ -127,7 +130,8 @@ $prevblue: #094a68;
 .error {
   list-style-type: none;
   font-size: 14px;
-  color: red;
+  color: darkred;
+  font-weight: bold;
   margin: auto;
 }
 

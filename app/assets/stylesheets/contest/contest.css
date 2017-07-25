@@ -3,15 +3,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  background-color: #094a68;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://i.stack.imgur.com/MtKUX.jpg');
   height: 500px;
-  width: 400px;
-  color: white;
+  width: 350px;
   font-weight: bold;
   border-radius: 10px;
-  font-family: 'Athiti', sans-serif;
-  box-shadow: 3px 3px black;
-  opacity: 0.9;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 .contest-form-container {
@@ -19,5 +16,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 90vh;
+  height: 80vh;
+}
+
+.contest-input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px black solid;
+  outline: none;
+  font-family: Helvetica, Arial, sans-serif;
+  padding-top: 5px;
 }

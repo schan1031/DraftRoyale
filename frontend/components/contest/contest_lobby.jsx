@@ -6,7 +6,6 @@ import { Redirect } from 'react-router-dom';
 export default class ContestLobby extends React.Component {
   constructor(props) {
     super(props);
-
   }
 
   componentDidMount() {

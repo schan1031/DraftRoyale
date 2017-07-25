@@ -6,7 +6,7 @@ import SessionFormContainer from '../session/session_form_container';
 export default class NavBar extends React.Component {
   constructor(props) {
     super(props);
-    this.state= {
+    this.state = {
       showModal: false
     };
     this.handleOpenModal = this.handleOpenModal.bind(this);

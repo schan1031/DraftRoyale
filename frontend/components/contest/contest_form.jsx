@@ -64,22 +64,22 @@ export default class ContestForm extends React.Component {
 
           <div className='input-field'>
             <span>Name</span>
-            <input type='text' value={this.state.name} onChange={this.update('name')}/>
+            <input className='contest-input' type='text' value={this.state.name} onChange={this.update('name')}/>
           </div>
 
           <div className='input-field'>
             <span>{'Point Value'}</span>
-            <input type='number' value={this.state.point_value} onChange={this.update('point_value')}/>
+            <input className='contest-input' type='number' value={this.state.point_value} onChange={this.update('point_value')}/>
           </div>
 
           <div className='input-field'>
             <span>Max Contestants</span>
-            <input type='number' value={this.state.max_contestants} onChange={this.update('max_contestants')}/>
+            <input className='contest-input' type='number' value={this.state.max_contestants} onChange={this.update('max_contestants')}/>
           </div>
 
           <div className='input-field'>
             <span>Date</span>
-            <input type='date' value={this.state.contest_date} onChange={this.update('contest_date')}/>
+            <input className='contest-input' type='date' value={this.state.contest_date} onChange={this.update('contest_date')}/>
           </div>
 
           <div>

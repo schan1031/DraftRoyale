@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { fetchPlayers, draftPlayer, returnPlayer } from '../../actions/player_actions';
+import { submitEntry } from '../../actions/dashboard_actions';
 import PlayerList from './player_list';
 
 const mapStateToProps = state => ({
@@ -13,7 +14,8 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   fetchPlayers: (teamIds) => dispatch(fetchPlayers(teamIds)),
   draftPlayer: (player) => dispatch(draftPlayer(player)),
-  returnPlayer: (player) => dispatch(returnPlayer(player))
+  returnPlayer: (player) => dispatch(returnPlayer(player)),
+  submitEntry: entry => dispatch(submitEntry(entry))
 });
 
 export default connect(
