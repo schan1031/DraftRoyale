@@ -4,7 +4,7 @@
 #
 #  id         :integer          not null, primary key
 #  user_id    :integer          not null
-#  contest_id :integer          not null
+#  contest_id :integer          not nullocntest
 #  p_one      :integer          not null
 #  p_two      :integer          not null
 #  p_three    :integer          not null
