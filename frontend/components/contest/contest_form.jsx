@@ -67,28 +67,30 @@ export default class ContestForm extends React.Component {
         <div className='create-contest-form'>
           <h2>Enter Contest Details</h2>
 
-          <div className='input-field'>
+          <div className='contest-input-field'>
             <span>Name</span>
             <input className='contest-input' type='text' value={this.state.name} onChange={this.update('name')}/>
           </div>
 
-          <div className='input-field'>
+          <div className='contest-input-field'>
             <span>{'Point Value'}</span>
             <input className='contest-input' type='number' value={this.state.point_value} onChange={this.update('point_value')}/>
           </div>
 
-          <div className='input-field'>
+          <div className='contest-input-field'>
             <span>Max Contestants</span>
             <input className='contest-input' type='number' value={this.state.max_contestants} onChange={this.update('max_contestants')}/>
           </div>
 
-          <div className='input-field'>
+          <div className='contest-input-field'>
             <span>Date</span>
             <input className='contest-input' type='date' value={this.state.contest_date} onChange={this.update('contest_date')}/>
           </div>
+          <div className='contest-form-error'>
+            {this.renderErrors()}
+          </div>
 
           <div>
-            {this.renderErrors()}
             <button className='contest-button' disabled={disable} onClick={this.handleSubmit}>Submit</button>
           </div>
 
