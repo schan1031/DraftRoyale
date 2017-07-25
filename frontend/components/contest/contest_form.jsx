@@ -14,7 +14,12 @@ export default class ContestForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount() {
+    // this.props.clearErrors();
+  }
+
   update(field) {
+    // this.props.clearErrors();
     return e => this.setState({
       [field]: e.target.value
     });

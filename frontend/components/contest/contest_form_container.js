@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchAllContests, fetchContest, submitContest } from '../../actions/contest_actions';
+import { fetchAllContests, fetchContest, submitContest, clearErrors } from '../../actions/contest_actions';
 import ContestForm from './contest_form';
 
 const mapStateToProps = state => ({
@@ -9,7 +9,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  submitContest: contest => dispatch(submitContest(contest))
+  submitContest: contest => dispatch(submitContest(contest)),
+  clearErrors: () => dispatch(clearErrors())
 });
 
 export default connect(

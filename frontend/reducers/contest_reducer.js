@@ -3,7 +3,8 @@ import { RECEIVE_ERRORS,
   RECEIVE_ALL_CONTESTS,
   RECEIVE_ONE_CONTEST,
   RECEIVE_SCHEDULE,
-  CHOOSE_CONTEST
+  CHOOSE_CONTEST,
+  CLEAR_ERRORS
 } from '../actions/contest_actions';
 
 const defaultState = {
@@ -19,6 +20,9 @@ const contestReducer = (state = defaultState, action) => {
     case RECEIVE_ERRORS:
       const contestErrors = action.contestErrors;
       return Object.assign({}, defaultState, { contestErrors });
+    case CLEAR_ERRORS:
+      const clearErrors = [];
+      return Object.assign({}, state, { contestErrors: clearErrors });
     case RECEIVE_ALL_CONTESTS:
       const contests = action.contests;
       return merge({}, defaultState, { contests });

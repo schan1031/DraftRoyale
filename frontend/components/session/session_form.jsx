@@ -18,12 +18,18 @@ class SessionForm extends React.Component {
     this.updatePassword = this.updatePassword.bind(this);
   }
 
+  componentDidMount() {
+    this.props.clearErrors();
+  }
+
   updateUsername(e) {
     this.setState({username: e.target.value});
+    this.props.clearErrors();
   }
 
   updatePassword(e) {
     this.setState({password: e.target.value});
+    this.props.clearErrors();
   }
 
   handleSubmit(e) {
