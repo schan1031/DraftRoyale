@@ -25,4 +25,8 @@ class Contest < ApplicationRecord
     primary_key: :id,
     foreign_key: :contest_id,
     class_name: :Entry
+
+  has_many :entrants,
+    through: :entries,
+    source: :user
 end

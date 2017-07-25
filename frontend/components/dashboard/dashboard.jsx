@@ -2,6 +2,7 @@ import React from 'react';
 import { values } from 'lodash';
 import UpcomingContest from './upcoming_contest.jsx';
 import PastContest from './past_contest.jsx';
+import { Redirect} from 'react-router-dom';
 
 export default class PlayerList extends React.Component {
   constructor(props) {
@@ -44,6 +45,10 @@ export default class PlayerList extends React.Component {
     const pastItems = past.map(
       (entry, idx) => <PastContest key={idx} entry={entry}/>
     );
+
+    if (!this.props.loggedIn) {
+      return <Redirect to='/' />;
+    }
 
     return (
       <div className='dashboard'>

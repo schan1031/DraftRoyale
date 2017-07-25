@@ -26,6 +26,10 @@ class User < ApplicationRecord
     foreign_key: :user_id,
     class_name: :Entry
 
+  has_many :entered_contests,
+    through: :entries,
+    source: :contest
+
   attr_reader :password
   after_initialize :ensure_session_token
 

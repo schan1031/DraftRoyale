@@ -1,6 +1,10 @@
 class Api::ContestsController < ApplicationController
   def index
-    @contests = Contest.all
+    ids = []
+    current_user.entered_contests.each do |contest|
+      ids.push(contest.id)
+    end
+    @contests = Contest.where('id NOT IN (?)', ids)
     render :index
   end
 

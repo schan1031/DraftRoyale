@@ -27,3 +27,24 @@
   font-family: Helvetica, Arial, sans-serif;
   padding-top: 5px;
 }
+
+.contest-button {
+  margin-bottom: 10px;
+  height: 40px;
+  width: 200px;
+  color: black;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  background-color: transparent;
+  border: 2px black solid;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.contest-button:disabled {
+  background-color: rgba(0,0,0,0.2);
+  border: 2px grey solid;
+  color: darkgrey;
+  cursor: not-allowed;
+}

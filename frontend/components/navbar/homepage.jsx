@@ -44,7 +44,7 @@ export default class Homepage extends React.Component {
       return (
         <div>
           <Link to='/lobby'>
-            <button className='start-button'>Get Started Now!</button>
+            <button className='start-button'>Contest Lobby</button>
           </Link>
         </div>
       );

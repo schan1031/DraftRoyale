@@ -57,6 +57,11 @@ export default class ContestForm extends React.Component {
       return <Redirect to='/' />;
     }
 
+    let disable = true;
+    if (this.state.name && this.state.point_value && this.state.max_contestants) {
+      disable = false;
+    }
+
     return (
       <div className='contest-form-container'>
         <div className='create-contest-form'>
@@ -84,7 +89,7 @@ export default class ContestForm extends React.Component {
 
           <div>
             {this.renderErrors()}
-            <button className='demologin-button' onClick={this.handleSubmit}>Submit</button>
+            <button className='contest-button' disabled={disable} onClick={this.handleSubmit}>Submit</button>
           </div>
 
         </div>

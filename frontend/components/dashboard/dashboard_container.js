@@ -3,7 +3,8 @@ import { fetchEntries } from '../../actions/dashboard_actions';
 import Dashboard from './dashboard';
 
 const mapStateToProps = state => ({
-  allEntries: state.dashboard.allEntries
+  allEntries: state.dashboard.allEntries,
+  loggedIn: state.session.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({
