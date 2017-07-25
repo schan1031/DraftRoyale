@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
+import { SingleDatePicker } from 'react-dates';
+import 'react-dates/lib/css/_datepicker.css';
 
 export default class ContestForm extends React.Component {
   constructor(props) {
@@ -8,25 +10,27 @@ export default class ContestForm extends React.Component {
       name: '',
       point_value: '',
       max_contestants: '',
+      // contest_date: null
       contest_date: new Date(Date.now())
     };
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentDidMount() {
-    // this.props.clearErrors();
-  }
-
   update(field) {
-    // this.props.clearErrors();
     return e => this.setState({
       [field]: e.target.value
     });
   }
 
   handleSubmit(e) {
-    this.props.submitContest(this.state);
+    const obj = {
+      name: this.state.name,
+      point_value: this.state.point_value,
+      max_contestants: this.state.max_contestants,
+      contest_date: this.state.contest_date
+    };
+    this.props.submitContest(obj);
   }
 
   renderErrors() {
@@ -104,3 +108,10 @@ export default class ContestForm extends React.Component {
     );
   }
 }
+
+// <SingleDatePicker
+//   date={this.state.contest_date} // momentPropTypes.momentObj or null
+//   onDateChange={contest_date => this.setState({ contest_date })} // PropTypes.func.isRequired
+//   focused={this.state.focused} // PropTypes.bool
+//   onFocusChange={({ focused }) => this.setState({ focused })} // PropTypes.func.isRequired
+// />
