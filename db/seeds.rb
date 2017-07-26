@@ -183,7 +183,7 @@ for i in 0..29
   Schedule.create(date: Date.new(2017, 8, 1+i), home_id: celtics_id, away_id: knicks_id)
 end
 
-for i in 0..10
+for i in 0..4
   for j in 0..11
     for k in 0..27
       Schedule.create(date: Date.new(2017+i, 1+j, 1+k), home_id: bulls_id, away_id: nets_id )

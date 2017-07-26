@@ -11,13 +11,12 @@
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #  contest_date    :date             not null
-#
 
 class Contest < ApplicationRecord
   validates :creator, :max_contestants, :point_value, :name, presence: true
   validates :point_value, inclusion: { in: 1..5000, message: 'must be between 1 and 5000' }
   validates :max_contestants, inclusion: { in: 1..100, message: 'must be 100 or less' }
-  validate :contest_date_not_past
+  # validate :contest_date_not_past
 
   def contest_date_not_past
     errors.add(:contest_date, "must be in the future.") if
