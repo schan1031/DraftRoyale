@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 export default class Landing extends React.Component {
   constructor(props) {
@@ -28,15 +28,21 @@ export default class Landing extends React.Component {
           <div className='landing-choices'>
             <div className = 'landchoice'>
               Get started with a contest.
-              <button className='landing-button'>Contest Lobby</button>
+              <Link to='/lobby'>
+                <button className='landing-button'>Contest Lobby</button>
+              </Link>
             </div>
             <div className = 'landchoice'>
               Make your own contest.
-              <button className='landing-button'>Create Contest</button>
+              <Link to='/createcontest'>
+                <button className='landing-button'>Create Contest</button>
+              </Link>
             </div>
             <div className = 'landchoice'>
               View your upcoming contests.
-              <button className='landing-button'>My Dashboard</button>
+              <Link to='/dashboard'>
+                <button className='landing-button'>My Dashboard</button>
+              </Link>
             </div>
           </div>
           <h2 className='news'>Player News</h2>
