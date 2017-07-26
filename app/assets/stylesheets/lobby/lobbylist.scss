@@ -1,5 +1,6 @@
 $testblue: #142c49;
 $testbluetwo: #094a68;
+$buttonblue: #70a1ef;
 
 .lobby-list {
   display: flex;
@@ -20,7 +21,6 @@ $testbluetwo: #094a68;
 
 .table--fixed tbody tr:nth-child(odd){
   background-color: rgba(100,100,100,0.4);
-  /*border: 10px #142c49 solid;*/
 }
 
 .table--fixed tr:nth-child(odd)>td {
@@ -113,7 +113,8 @@ th {
 .enter-button {
   font-family: 'Athiti', sans-serif;
   width: 80px;
-  background-color: #70a1ef;
+  background-color: rgba(255,255,255,0.9);
+  color: black;
   border: none;
   box-shadow: 1px 1px black;
   font-size: 14px;
