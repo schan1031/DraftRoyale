@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactModal from 'react-modal';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import SessionFormContainer from '../session/session_form_container';
 
 export default class Homepage extends React.Component {
@@ -24,6 +24,7 @@ export default class Homepage extends React.Component {
   }
 
   lobbyOrLogin() {
+
     if (!this.props.currentUser) {
       return (
         <div>
@@ -52,7 +53,11 @@ export default class Homepage extends React.Component {
   }
 
   render() {
-    console.log(this.props);
+
+    if (this.props.currentUser) {
+      return <Redirect to='/landing' />;
+    }
+
     return(
       <div className='home'>
         <div className='main-page'>

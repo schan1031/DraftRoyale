@@ -92,10 +92,6 @@ class SessionForm extends React.Component {
 
   render () {
 
-    if (this.props.loggedIn) {
-      return <Redirect to='/' />;
-    }
-
     return (
       <div className='session-form'>
         <h2>Play Now!</h2>

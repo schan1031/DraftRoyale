@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-around;
   color: white;
-  height: 70vh;
+  // height: 70vh;
   padding-top: 5vh;
   font-family: Helvetica, Arial, sans-serif;
 }
@@ -46,4 +46,75 @@ h1, h2 {
 
 .news {
   padding-top: 5vh;
+}
+
+
+.newslist {
+  margin: none;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  width: 650px;
+  // flex-wrap: wrap;
+}
+
+.news-li{
+  display: flex;
+  background-color: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+  border: 2px rgba(200,200,200,0.7) solid;
+
+  // height: 200px;
+}
+
+.news-img {
+  width: 180px;
+  height: 131px;
+}
+
+.img-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  border-left: 2px rgba(200,200,200,0.7) solid;
+  min-height: 112px;
+  // background-color: rgba(0,0,0,0.5);
+  // border: 2px rgba(200,200,200,0.7) solid;
+  padding: 10px;
+  // width: 35vw;
+  // height: 96px;
+}
+
+.news-date {
+  font-size: 14px;
+}
+
+.news-body {
+  font-size: 14px;
+  padding-top: 1vh;
+}
+
+.rightlanding {
+  margin-top: 8vh;
+  width: 45vh;
+  font-size: 14px;
+  // text-align: center;
+}
+
+.tabheader {
+  margin-top: 0px;
+}
+
+.whatsacontest {
+  background-color: rgba(0.5,0.5,0.5,0.7);
+  border-radius: 10px;
+  padding: 3vh;
+}
+
+.howtoplay {
+  margin-top: 7vh;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 10px;
+  padding: 3vh;
 }
