@@ -1,4 +1,5 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 
 export default class Landing extends React.Component {
   constructor(props) {
@@ -6,6 +7,11 @@ export default class Landing extends React.Component {
   }
 
   render() {
+
+    if (!this.props.currentUser) {
+      return <Redirect to='/' />;
+    }
+
     const today = new Date();
     const months = ['January', 'February', 'March', 'April',
                       'May', 'June', 'July', 'August', 'Sepctember',
@@ -15,6 +21,7 @@ export default class Landing extends React.Component {
     const yesterdayStr = `${months[today.getMonth()]} ${today.getDate()}`;
 
     return(
+
       <div className='landing'>
         <div className='leftlanding'>
           <h1>Welcome {this.props.currentUser.username}!</h1>
