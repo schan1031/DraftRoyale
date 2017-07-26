@@ -8,6 +8,7 @@ import ContestLobbyContainer from './contest/contest_lobby_container';
 import PlayerListContainer from './playerlist/player_list_container';
 import DashboardContainer from './dashboard/dashboard_container';
 import HomepageContainer from './navbar/homepage_container';
+import LandingContainer from './landing/landing_container';
 
 const App = () => (
   <div>
@@ -20,6 +21,7 @@ const App = () => (
     <Route path='/lobby' component={ContestLobbyContainer} />
     <Route path='/contest/draft/' component={PlayerListContainer} />
     <Route path='/dashboard' component={DashboardContainer} />
+    <Route path='/landing' component={LandingContainer} />
   </div>
 );
 

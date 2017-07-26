@@ -1,0 +1,49 @@
+.landing {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  height: 70vh;
+  padding-top: 5vh;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Fugaz One', cursive;
+}
+
+.landing-choices {
+  display: flex;
+}
+
+.leftlanding {
+  display: flex;
+  flex-direction: column;
+}
+
+.landchoice {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  // align-items: center;
+}
+
+.landing-button {
+  width: 17vh;
+  margin-top: 2.5vh;
+  padding: 10px;
+  font-family: Helvetica, Arial, sans-serif;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  background-color: rgba(50,150,50,0.8);
+  color: white;
+  cursor: pointer;
+}
+
+.landing-button:hover {
+  transform: scale(1.05);
+}
+
+.news {
+  padding-top: 5vh;
+}
