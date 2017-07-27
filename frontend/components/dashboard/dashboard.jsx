@@ -55,7 +55,7 @@ export default class PlayerList extends React.Component {
     }
 
     return (
-      <div className='dashboard'>
+      <div className='dashboard animated fadeIn'>
 
         <div className='upcoming'>
           <ul>

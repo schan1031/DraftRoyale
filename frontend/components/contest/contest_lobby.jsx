@@ -24,7 +24,7 @@ export default class ContestLobby extends React.Component {
 
     return(
       <div className='lobby-list'>
-        <table className='list-table table--fixed'>
+        <table className='list-table table--fixed animated fadeIn'>
           <thead>
             <tr>
               <th className='cn'>Contest Name</th>

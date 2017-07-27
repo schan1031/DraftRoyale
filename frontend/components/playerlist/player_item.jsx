@@ -10,10 +10,12 @@ export default class PlayerItem extends React.Component {
   }
 
   handleSwap() {
-    this.setState({animClass: 'animated fadeOutRight'});
-    setTimeout(() => {
-      this.props.draftPlayer(this.props.player);
-    }, 400);
+    if (this.props.fillers > 0) {
+      this.setState({animClass: 'animated fadeOutRight'});
+      setTimeout(() => {
+        this.props.draftPlayer(this.props.player);
+      }, 400);
+    }
   }
 
   render() {

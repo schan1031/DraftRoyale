@@ -72,7 +72,7 @@ export default class ContestForm extends React.Component {
     }
 
     return (
-      <div className='contest-form-container'>
+      <div className='contest-form-container animated fadeIn'>
         <div className='create-contest-form'>
           <h2>Enter Contest Details</h2>
 

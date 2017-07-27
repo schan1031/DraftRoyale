@@ -12,6 +12,7 @@ export default class NavBar extends React.Component {
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
+    this.homeOrTitle = this.homeOrTitle.bind(this);
   }
 
   handleLogout() {
@@ -64,16 +65,31 @@ export default class NavBar extends React.Component {
     }
   }
 
+  homeOrTitle () {
+    if (this.props.currentUser) {
+      return (
+        <Link to='/landing'>
+          <button className='title'>logo</button>
+          <button className='title'>DraftRoyale</button>
+        </Link>
+      );
+    } else {
+      return (
+        <Link to='/'>
+          <button className='title'>logo</button>
+          <button className='title'>DraftRoyale</button>
+        </Link>
+      );
+    }
+  }
+
   render() {
     const sess = this.props.currentUser ? 'Profile' : 'Log In';
 
     return(
       <nav className='nav-bar'>
         <div className='left-nav'>
-          <Link to='/'>
-            <button className='title'>logo</button>
-            <button className='title'>DraftRoyale</button>
-          </Link>
+          {this.homeOrTitle()}
         </div>
 
         <div className='right-nav'>

@@ -2,13 +2,16 @@ import React from 'react';
 import { values } from 'lodash';
 import PlayerItem from './player_item';
 import MyTeam from './my_team';
-// import { postEntry } from '../../util/entry_api_util';
 import { Link } from 'react-router-dom';
 
 export default class PlayerList extends React.Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.state = {
+      sortParam: 'ppg'
+    };
+    this.handleSort = this.handleSort.bind(this);
   }
 
   componentDidUpdate(prevProps) {
@@ -32,6 +35,11 @@ export default class PlayerList extends React.Component {
         team_ids: out
       });
     }
+  }
+
+  handleSort(e) {
+    console.log(e.target);
+    // this.setState({sortParam: e.target.value});
   }
 
   handleSubmit() {
@@ -60,7 +68,9 @@ export default class PlayerList extends React.Component {
       const p1 = this.props.players[Object.keys(this.props.players)[0]];
 
       let draftPlayer = this.props.draftPlayer;
-      const players = values(this.props.players);
+      const players = values(this.props.players).sort((a,b) => {
+        return parseFloat(b[this.state.sortParam]) - parseFloat(a[this.state.sortParam]);
+      });
       const myPlayers = values(this.props.myTeam);
       const fillers = 8-myPlayers.length;
       let disabled = true;
@@ -77,7 +87,7 @@ export default class PlayerList extends React.Component {
       }
 
       const playerItems = players.map(
-        (player, idx) => <PlayerItem key={player.name} player={player} draftPlayer={draftPlayer}/>
+        (player, idx) => <PlayerItem key={player.name} player={player} draftPlayer={draftPlayer} fillers={fillers}/>
       );
 
       const myTeam = myPlayers.map(
@@ -89,19 +99,19 @@ export default class PlayerList extends React.Component {
           <div className='section'>
             <div className='list-title'>
               <div className='posheader'>
-                {'POS'}
+                <span value='pos' onClick={this.handleSort}>{'POS'}</span>
               </div>
               <div className='nameheader'>
-                Name
+                <span>Name</span>
               </div>
               <div className='ppgheader'>
-                {'PPG'}
+                <span value='ppg' onClick={this.handleSort}>{'PPG'}</span>
               </div>
               <div className='apgheader'>
-                {'APG'}
+                <span value='apg' onClick={this.handleSort}>{'APG'}</span>
               </div>
               <div className='rpgheader'>
-                {'RPG'}
+                <span value='rpg' onClick={this.handleSort}>{'RPG'}</span>
               </div>
               <div className='fppgheader'>
                 {'FPPG'}

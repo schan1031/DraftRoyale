@@ -22,7 +22,7 @@ export default class Landing extends React.Component {
 
     return(
 
-      <div className='landing'>
+      <div className='landing animated fadeIn'>
         <div className='leftlanding'>
           <h1>Welcome {this.props.currentUser.username}!</h1>
           <div className='landing-choices'>
