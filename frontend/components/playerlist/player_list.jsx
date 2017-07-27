@@ -77,7 +77,7 @@ export default class PlayerList extends React.Component {
       }
 
       const playerItems = players.map(
-        (player, idx) => <PlayerItem key={idx} player={player} draftPlayer={draftPlayer}/>
+        (player, idx) => <PlayerItem key={player.name} player={player} draftPlayer={draftPlayer}/>
       );
 
       const myTeam = myPlayers.map(

@@ -5,11 +5,29 @@ export default class MyTeam extends React.Component {
     super(props);
     this.handleSwap = this.handleSwap.bind(this);
     this.returnbutt = this.returnbutt.bind(this);
+    this.state = {
+      animClass: 'animated fadeInLeft'
+    };
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.player.name != nextProps.player.name) {
+      if (nextProps.player.name === '-') {
+        this.setState({animClass: 'animated fadeInRight'});
+      } else {
+        this.setState({animClass: 'animated fadeInLeft'});
+      }
+
+    }
+
   }
 
   handleSwap() {
     if (this.props.player.name !== '-') {
-      this.props.returnPlayer(this.props.player);
+      this.setState({animClass: 'animated fadeOutLeft'});
+      setTimeout(() => {
+        this.props.returnPlayer(this.props.player);
+      }, 400);
     }
   }
 
@@ -32,7 +50,7 @@ export default class MyTeam extends React.Component {
     }
 
     return(
-      <li className='player-info'>
+      <li className={`player-info ${this.state.animClass}`}>
         <div className='drop-button'>
           <button onClick={this.handleSwap}>-</button>
         </div>

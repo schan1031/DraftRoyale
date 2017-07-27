@@ -4,10 +4,16 @@ export default class PlayerItem extends React.Component {
   constructor(props) {
     super(props);
     this.handleSwap = this.handleSwap.bind(this);
+    this.state = {
+      animClass: 'animated fadeInRight'
+    };
   }
 
   handleSwap() {
-    this.props.draftPlayer(this.props.player);
+    this.setState({animClass: 'animated fadeOutRight'});
+    setTimeout(() => {
+      this.props.draftPlayer(this.props.player);
+    }, 400);
   }
 
   render() {
@@ -15,7 +21,7 @@ export default class PlayerItem extends React.Component {
     let fppg = player.ppg + player.apg*2 + player.rpg*1.2;
     fppg = Math.round(fppg*10)/10;
     return(
-      <li className='player-info'>
+      <li className={`player-info ${this.state.animClass}`}>
         <div className='player-position'>
           {player.position}
         </div>
