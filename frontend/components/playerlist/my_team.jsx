@@ -27,7 +27,7 @@ export default class MyTeam extends React.Component {
       this.setState({animClass: 'animated fadeOutLeft'});
       setTimeout(() => {
         this.props.returnPlayer(this.props.player);
-      }, 400);
+      }, 500);
     }
   }
 

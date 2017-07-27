@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://i.stack.imgur.com/MtKUX.jpg');
+  background: linear-gradient(rgba(50, 0, 0, 0.2), rgba(50, 0, 0, 0.2)), url('https://i.stack.imgur.com/MtKUX.jpg');
   height: 500px;
   width: 350px;
   font-weight: bold;

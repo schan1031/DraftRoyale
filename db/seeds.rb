@@ -40,12 +40,12 @@ warriors_id = Team.find_by_name('Golden State Warriors').id
 u1 = User.create(username: 'bob', password: 'password')
 u2 = User.create(username: 'IamADemo', password: 'password')
 
-for i in 0..11
+for i in 0..9
   Contest.create(creator_id: u1.id,
     max_contestants: 15,
     point_value: 20,
     name: "Contest #{i}",
-    contest_date: Date.new(2017,7, 20+i)
+    contest_date: Date.new(2017,7, 22+i)
   )
 end
 
@@ -136,17 +136,17 @@ lakers = [
 ]
 
 warriors = [
-  {name: 'Klay Thompson', position: 'PF', ppg: 22.3, apg: 2.1, rpg: 3.7, spg: 0.8, bpg: 0.5, ft: 0.853, fg: 0.468, height: 76, weight: 220, team_id: warriors_id, image_url: 'https://nba-players.herokuapp.com/players/thompson/klay'},
-  {name: 'Stephen Curry', position: 'PF', ppg: 25.3, apg: 6.6, rpg: 4.5, spg: 1.8, bpg: 0.2, ft: 0.898, fg: 0.468, height: 76, weight: 220, team_id: warriors_id, image_url: 'https://nba-players.herokuapp.com/players/curry/stephen'},
-  {name: 'Kevin Durant', position: 'PF', ppg: 25.1, apg: 4.8, rpg: 8.3, spg: 1.1, bpg: 1.6, ft: 0.875, fg: 0.537, height: 76, weight: 220, team_id: warriors_id, image_url: 'https://nba-players.herokuapp.com/players/durant/kevin'},
+  {name: 'Klay Thompson', position: 'SG', ppg: 22.3, apg: 2.1, rpg: 3.7, spg: 0.8, bpg: 0.5, ft: 0.853, fg: 0.468, height: 76, weight: 220, team_id: warriors_id, image_url: 'https://nba-players.herokuapp.com/players/thompson/klay'},
+  {name: 'Stephen Curry', position: 'PG', ppg: 25.3, apg: 6.6, rpg: 4.5, spg: 1.8, bpg: 0.2, ft: 0.898, fg: 0.468, height: 76, weight: 220, team_id: warriors_id, image_url: 'https://nba-players.herokuapp.com/players/curry/stephen'},
+  {name: 'Kevin Durant', position: 'SF', ppg: 25.1, apg: 4.8, rpg: 8.3, spg: 1.1, bpg: 1.6, ft: 0.875, fg: 0.537, height: 76, weight: 220, team_id: warriors_id, image_url: 'https://nba-players.herokuapp.com/players/durant/kevin'},
   {name: 'Draymond Green', position: 'PF', ppg: 10.2, apg: 7.0, rpg: 7.9, spg: 2.0, bpg: 1.4, ft: 0.709, fg: 0.418, height: 76, weight: 220, team_id: warriors_id, image_url: 'https://nba-players.herokuapp.com/players/green/draymond'},
-  {name: 'Andre Iguodala', position: 'PF', ppg: 7.6, apg: 3.4, rpg: 4.0, spg: 1.0, bpg: 0.5, ft: 0.706, fg: 0.528, height: 76, weight: 220, team_id: warriors_id, image_url: 'https://nba-players.herokuapp.com/players/iguodala/andre'},
-  {name: 'Matt Barnes', position: 'PF', ppg: 5.7, apg: 2.3, rpg: 4.6, spg: 0.6, bpg: 0.5, ft: 0.870, fg: 0.422, height: 76, weight: 220, team_id: warriors_id, image_url: 'https://nba-players.herokuapp.com/players/barnes/matt'},
-  {name: 'Zaza Pachulia', position: 'PF', ppg: 6.1, apg: 1.9, rpg: 5.9, spg: 0.8, bpg: 0.5, ft: 0.778, fg: 0.534, height: 76, weight: 220, team_id: warriors_id, image_url: 'https://nba-players.herokuapp.com/players/pachulia/zaza'},
-  {name: 'Shaun Livingston', position: 'PF', ppg: 5.1, apg: 1.8, rpg: 2.0, spg: 0.5, bpg: 0.3, ft: 0.700, fg: 0.547, height: 76, weight: 220, team_id: warriors_id, image_url: 'https://nba-players.herokuapp.com/players/livingston/shaun'},
-  {name: 'Ian Clark', position: 'PF', ppg: 6.8, apg: 1.2, rpg: 1.6, spg: 0.5, bpg: 0.1, ft: 0.759, fg: 0.487, height: 76, weight: 220, team_id: warriors_id, image_url: 'https://nba-players.herokuapp.com/players/clark/ian'},
+  {name: 'Andre Iguodala', position: 'SF', ppg: 7.6, apg: 3.4, rpg: 4.0, spg: 1.0, bpg: 0.5, ft: 0.706, fg: 0.528, height: 76, weight: 220, team_id: warriors_id, image_url: 'https://nba-players.herokuapp.com/players/iguodala/andre'},
+  {name: 'Matt Barnes', position: 'SF', ppg: 5.7, apg: 2.3, rpg: 4.6, spg: 0.6, bpg: 0.5, ft: 0.870, fg: 0.422, height: 76, weight: 220, team_id: warriors_id, image_url: 'https://nba-players.herokuapp.com/players/barnes/matt'},
+  {name: 'Zaza Pachulia', position: 'C', ppg: 6.1, apg: 1.9, rpg: 5.9, spg: 0.8, bpg: 0.5, ft: 0.778, fg: 0.534, height: 76, weight: 220, team_id: warriors_id, image_url: 'https://nba-players.herokuapp.com/players/pachulia/zaza'},
+  {name: 'Shaun Livingston', position: 'PG', ppg: 5.1, apg: 1.8, rpg: 2.0, spg: 0.5, bpg: 0.3, ft: 0.700, fg: 0.547, height: 76, weight: 220, team_id: warriors_id, image_url: 'https://nba-players.herokuapp.com/players/livingston/shaun'},
+  {name: 'Ian Clark', position: 'SF', ppg: 6.8, apg: 1.2, rpg: 1.6, spg: 0.5, bpg: 0.1, ft: 0.759, fg: 0.487, height: 76, weight: 220, team_id: warriors_id, image_url: 'https://nba-players.herokuapp.com/players/clark/ian'},
   {name: 'David West', position: 'PF', ppg: 4.6, apg: 2.2, rpg: 3.0, spg: 0.6, bpg: 0.7, ft: 0.768, fg: 0.536, height: 76, weight: 220, team_id: warriors_id, image_url: 'https://nba-players.herokuapp.com/players/west/david'},
-  {name: 'Anderson Varejao', position: 'PF', ppg: 1.3, apg: 0.7, rpg: 1.9, spg: 0.2, bpg: 0.2, ft: 0.727, fg: 0.357, height: 76, weight: 220, team_id: warriors_id, image_url: 'https://nba-players.herokuapp.com/players/varejao/anderson'},
+  {name: 'Anderson Varejao', position: 'C', ppg: 1.3, apg: 0.7, rpg: 1.9, spg: 0.2, bpg: 0.2, ft: 0.727, fg: 0.357, height: 76, weight: 220, team_id: warriors_id, image_url: 'https://nba-players.herokuapp.com/players/varejao/anderson'},
 ]
 
 knicks.concat(nets).concat(bulls).concat(celtics).concat(lakers).concat(warriors).each do |player|
@@ -176,6 +176,7 @@ end
 for i in 0..30
   Schedule.create(date: Date.new(2017, 7, 1 + i), home_id: knicks_id, away_id: nets_id)
   Schedule.create(date: Date.new(2017, 7, 1 + i), home_id: celtics_id, away_id: lakers_id)
+  Schedule.create(date: Date.new(2017, 7, 1 + i), home_id: warriors_id, away_id: bulls_id)
 end
 
 for i in 0..29

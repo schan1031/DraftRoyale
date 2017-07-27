@@ -14,7 +14,7 @@ export default class PlayerItem extends React.Component {
       this.setState({animClass: 'animated fadeOutRight'});
       setTimeout(() => {
         this.props.draftPlayer(this.props.player);
-      }, 400);
+      }, 500);
     }
   }
 
