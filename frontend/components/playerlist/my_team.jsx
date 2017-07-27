@@ -6,7 +6,7 @@ export default class MyTeam extends React.Component {
     this.handleSwap = this.handleSwap.bind(this);
     this.returnbutt = this.returnbutt.bind(this);
     this.state = {
-      animClass: 'animated fadeInLeft'
+      animClass: 'animated fadeIn'
     };
   }
 

@@ -38,8 +38,7 @@ export default class PlayerList extends React.Component {
   }
 
   handleSort(e) {
-    console.log(e.target);
-    // this.setState({sortParam: e.target.value});
+    this.setState({sortParam: e.target.value});
   }
 
   handleSubmit() {
@@ -99,19 +98,19 @@ export default class PlayerList extends React.Component {
           <div className='section'>
             <div className='list-title'>
               <div className='posheader'>
-                <span value='pos' onClick={this.handleSort}>{'POS'}</span>
+                <button className='headbutt' value='pos' onClick={this.handleSort}>{'POS'}</button>
               </div>
               <div className='nameheader'>
                 <span>Name</span>
               </div>
               <div className='ppgheader'>
-                <span value='ppg' onClick={this.handleSort}>{'PPG'}</span>
+                <button className='headbutt' value='ppg' onClick={this.handleSort}>{'PPG'}</button>
               </div>
               <div className='apgheader'>
-                <span value='apg' onClick={this.handleSort}>{'APG'}</span>
+                <button className='headbutt' value='apg' onClick={this.handleSort}>{'APG'}</button>
               </div>
               <div className='rpgheader'>
-                <span value='rpg' onClick={this.handleSort}>{'RPG'}</span>
+                <button className='headbutt' value='rpg' onClick={this.handleSort}>{'RPG'}</button>
               </div>
               <div className='fppgheader'>
                 {'FPPG'}

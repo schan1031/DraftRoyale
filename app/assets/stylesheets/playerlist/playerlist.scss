@@ -21,14 +21,17 @@ button {
   overflow-y: auto;
   background-color: rgba(0,0,0,0.25);
   list-style-type: none;
+  overflow-x: hidden;
+
 }
 
 .my-team {
-  max-height: 85vh;
+  max-height: 80vh;
   width: 500px;
   overflow-y: auto;
   background-color: rgba(0,0,0,0.25);
   list-style-type: none;
+  overflow-x: hidden;
 }
 
 .player-info {
@@ -156,17 +159,17 @@ button {
 }
 
 ::-webkit-scrollbar {
-    width: 8px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,1);
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,1);
 }
 
 .post-entry {
@@ -191,4 +194,15 @@ button {
 .post-entry:disabled:hover {
   background-color: rgba(100,100,100,0.8);
   transform: none;
+}
+
+.headbutt {
+  cursor: pointer;
+  border: none;
+  margin: 0px;
+  background: transparent;
+  color: #F28400;
+  font-weight: 900;
+  font-size: 12px;
+  padding: 0px;
 }
