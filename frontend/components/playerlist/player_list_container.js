@@ -8,7 +8,8 @@ const mapStateToProps = state => ({
   myTeam: state.players.myTeam,
   schedule: state.contests.schedule,
   contestId: state.contests.contestId,
-  currentUser: state.session.currentUser
+  currentUser: state.session.currentUser,
+  prevNames: state.players.prevTeamNames
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -71,25 +71,37 @@ export default class PlayerList extends React.Component {
         return parseFloat(b[this.state.sortParam]) - parseFloat(a[this.state.sortParam]);
       });
       const myPlayers = values(this.props.myTeam);
+
+      const myNames = [];
+      for (let i = 0; i < myPlayers.length; i++) {
+        myNames.push(myPlayers[i].name);
+      }
+
+      const names = this.props.prevNames;
+      const myTemp = [{}, {}, {}, {}, {}, {}, {}, {}];
+
+      for (let i = 0; i < 8; i++) {
+        if (names[i]) {
+          const ind = myNames.indexOf(names[i]);
+          myTemp[i] = myPlayers[ind];
+        } else {
+          myTemp[i] = {position: 'P', name: '-', ppg: 0, apg: 0, rpg: 0, image_url: 'http://shipinc.org/wp-content/themes/act-child/img/HeadShot%20Male%20Gray.png' };
+        }
+      }
+
       const fillers = 8-myPlayers.length;
       let disabled = true;
-
+      
       if (fillers === 0) {
         draftPlayer = () => console.log('');
         disabled = false;
-      }
-
-      for (let i = 0; i < fillers; i++) {
-        myPlayers.push(
-          {position: 'P', name: '-', ppg: 0, apg: 0, rpg: 0, image_url: 'http://shipinc.org/wp-content/themes/act-child/img/HeadShot%20Male%20Gray.png' }
-        );
       }
 
       const playerItems = players.map(
         (player, idx) => <PlayerItem key={player.name} player={player} draftPlayer={draftPlayer} fillers={fillers}/>
       );
 
-      const myTeam = myPlayers.map(
+      const myTeam = myTemp.map(
         (player, idx) => <MyTeam key={idx} player={player} returnPlayer={this.props.returnPlayer} />
       );
 

@@ -4,7 +4,8 @@ import { RECEIVE_PLAYERS, DRAFT_PLAYER, RETURN_PLAYER } from '../actions/player_
 const defaultState = {
   players: {},
   player_errors: [],
-  myTeam: {}
+  myTeam: {},
+  prevTeamNames: ['', '', '', '', '', '', '', '']
 };
 
 const playerReducer = (state = defaultState, action) => {
@@ -18,12 +19,23 @@ const playerReducer = (state = defaultState, action) => {
       const newState = merge({}, state);
       newState.myTeam[player.id] = player;
       delete newState.players[player.id];
+
+      let i = 0;
+      while (newState.prevTeamNames[i]) {
+        i++;
+      }
+      newState.prevTeamNames[i] = player.name;
+
       return newState;
     case RETURN_PLAYER:
       const playee = action.player;
       const newStatey = merge({}, state);
       newStatey.players[playee.id] = playee;
       delete newStatey.myTeam[playee.id];
+
+      const ind = newStatey.prevTeamNames.indexOf(playee.name);
+      newStatey.prevTeamNames[ind] = '';
+
       return newStatey;
     default:
       return state;
