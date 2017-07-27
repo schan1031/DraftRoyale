@@ -17,9 +17,7 @@ export default class MyTeam extends React.Component {
       } else {
         this.setState({animClass: 'animated fadeInLeft'});
       }
-
     }
-
   }
 
   handleSwap() {
