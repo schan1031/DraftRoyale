@@ -69,7 +69,6 @@ export default class NavBar extends React.Component {
     if (this.props.currentUser) {
       return (
         <Link to='/landing'>
-          <button className='title'>logo</button>
           <button className='title'>DraftRoyale</button>
         </Link>
       );
