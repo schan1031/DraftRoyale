@@ -48,7 +48,6 @@ h1, h2 {
   padding-top: 5vh;
 }
 
-
 .newslist {
   margin: none;
   list-style-type: none;
@@ -115,4 +114,8 @@ h1, h2 {
   background-color: rgba(0,0,0,0.5);
   border-radius: 10px;
   padding: 3vh;
+}
+
+.tutorial, .news-body {
+  color: lightgrey;
 }

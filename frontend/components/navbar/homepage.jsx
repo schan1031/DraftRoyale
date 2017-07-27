@@ -59,33 +59,51 @@ export default class Homepage extends React.Component {
     }
 
     return(
-      <div className='home'>
-        <div className='main-page'>
-          <h1>
-            Experience the Game
-          </h1>
-          {this.lobbyOrLogin()}
+      <div>
+        <div className='home'>
+          <div className='main-page'>
+            <h1>
+              Experience the Game
+            </h1>
+            {this.lobbyOrLogin()}
+          </div>
+          <div className='sub-info'>
+            <div className='info-box'>
+              <img className='info-img' alt="Icon" src="/assets/jumpman" height='150' width='150'/>
+              <span className='info-text'>
+                Enhance your NBA experience.
+              </span>
+            </div>
+            <div className='info-box'>
+              <img className='info-img' alt="Icon" src="/assets/users" height='150' width='150'/>
+              <span className='info-text'>
+                Play against friends.
+              </span>
+            </div>
+            <div className='info-box'>
+              <img className='info-img' alt="Icon" src="/assets/coins" height='150' width='150'/>
+              <span className='info-text'>
+                Earn points and prizes!
+              </span>
+            </div>
+          </div>
         </div>
-        <div className='sub-info'>
-          <div className='info-box'>
-            <img className='info-img' alt="Icon" src="/assets/jumpman" height='150' width='150'/>
-            <span className='info-text'>
-              Enhance your NBA experience.
-            </span>
+        <footer className='footer'>
+          <div className='footimgcont'>
+            <a target='_blank'
+              href='https://github.com/schan1031/DraftRoyale'>
+              <img className='footer-img' alt="Icon" src="/assets/github-sign" height='32' width='32'/>
+            </a>
+            <a target='_blank'
+              href='https://www.linkedin.com/in/spencer-chan-321575a5'>
+              <img className='footer-img' alt="Icon" src="/assets/linkedin-logo" height='32' width='32'/>
+            </a>
+
           </div>
-          <div className='info-box'>
-            <img className='info-img' alt="Icon" src="/assets/users" height='150' width='150'/>
-            <span className='info-text'>
-              Play against friends.
-            </span>
+          <div className='nameFooter'>
+            Spencer Chan
           </div>
-          <div className='info-box'>
-            <img className='info-img' alt="Icon" src="/assets/coins" height='150' width='150'/>
-            <span className='info-text'>
-              Earn points and prizes!
-            </span>
-          </div>
-        </div>
+        </footer>
       </div>
     );
   }

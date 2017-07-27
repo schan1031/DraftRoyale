@@ -89,7 +89,7 @@ export default class Landing extends React.Component {
         <div className='rightlanding'>
           <div className='whatsacontest'>
             <h2 className='tabheader'>What's a contest?</h2>
-            <span>
+            <span className='tutorial'>
               A contest is a fantasy sports game in which you build a team of professional NBA players.
               Your team earns points based on the actual performance of your drafted players in their real life games that night.
               At the end of the night, your team's performance is compared to those of other entrants in your contests.
@@ -98,7 +98,7 @@ export default class Landing extends React.Component {
 
           <div className='howtoplay'>
             <h2 className='tabheader'>How to Play</h2>
-            <span>
+            <span className='tutorial'>
               Select a contest from the contest lobby, and click the enter button on the right.
               Choose your team of 8 players from the list of available players playing that night. Click the green button to add a player, up to 8 players.
               If you would like to remove a player from your team, click the red button to drop the player back into the player list.
