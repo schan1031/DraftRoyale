@@ -23,6 +23,18 @@ export default class PlayerList extends React.Component {
     }
   }
 
+  noUpcoming() {
+    return (
+      <li className='placeholder'>No Upcoming Contests</li>
+    );
+  }
+
+  noPast() {
+    return(
+      <li className= 'placeholder'>No Past Contests</li>
+    );
+  }
+
   render() {
 
     const entries = values(this.props.allEntries);
@@ -39,16 +51,24 @@ export default class PlayerList extends React.Component {
       }
     });
 
-    const upcomingItems = upcoming.map(
+    let upcomingItems = upcoming.map(
       (entry, idx) => <UpcomingContest key={idx} entry={entry}/>
     );
 
-    const pastItems = past.map(
+    let pastItems = past.map(
       (entry, idx) => <PastContest key={idx} entry={entry}/>
     );
 
     if (!this.props.loggedIn) {
       return <Redirect to='/' />;
+    }
+
+    if (upcomingItems.length === 0) {
+      upcomingItems = this.noUpcoming();
+    }
+
+    if (pastItems.length === 0) {
+      pastItems = this.noPast();
     }
 
     return (
