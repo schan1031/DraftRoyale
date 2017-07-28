@@ -100,6 +100,24 @@ WHERE
 - Entries are searched based on current user entries.
 - SQL modification on the index route of Entries provides only entered contests by the current user.
 
+The Contest entered and the players drafted are pulled through the database using associations in our JBuilder view, allowing for one API request to pull the information of three separate requests.
+
+```
+@entries.each do |entry|
+  json.set! entry.id do
+    json.contest entry.contest, :name, :point_value, :max_contestants, :contest_date, :status
+    json.p1 entry.playone
+    json.p2 entry.playtwo
+    json.p3 entry.playthree
+    json.p4 entry.playfour
+    json.p5 entry.playfive
+    json.p6 entry.playsix
+    json.p7 entry.playseven
+    json.p8 entry.playeight
+  end
+end
+```
+
 ![draft](./public/dashboard.png)
 
 ## Future Plans
