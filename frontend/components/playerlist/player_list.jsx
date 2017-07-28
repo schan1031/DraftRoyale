@@ -54,7 +54,9 @@ export default class PlayerList extends React.Component {
       p_seven: myTeam[keys[6]].id,
       p_eight: myTeam[keys[7]].id,
     };
-    this.props.submitEntry(entry);
+    this.props.submitEntry(entry).then(
+      this.props.history.push('/dashboard')
+    );
   }
 
   render() {
@@ -135,9 +137,7 @@ export default class PlayerList extends React.Component {
               {myTeam}
             </ul>
             <div>
-              <Link to='/dashboard'>
-                <button className='post-entry' disabled={disabled} onClick={this.handleSubmit}>Submit</button>
-              </Link>
+              <button className='post-entry' disabled={disabled} onClick={this.handleSubmit}>Submit</button>
             </div>
           </div>
         </div>

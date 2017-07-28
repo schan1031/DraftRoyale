@@ -44,12 +44,16 @@ export default class PlayerList extends React.Component {
       const today = new Date();
 
       entries.forEach((entry) => {
-        const entryDate = new Date(entry.contest.contest_date);
-        if (entryDate > today) {
-          upcoming.push(entry);
-        } else {
-          past.push(entry);
+
+        if (entry.contest) {
+          const entryDate = new Date(entry.contest.contest_date);
+          if (entryDate > today) {
+            upcoming.push(entry);
+          } else {
+            past.push(entry);
+          }
         }
+
       });
 
       let upcomingItems = upcoming.map(
