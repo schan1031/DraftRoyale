@@ -58,7 +58,6 @@ export default class PlayerList extends React.Component {
   }
 
   render() {
-    console.log(this.props.players);
     if (Object.keys(this.props.players).length === 0 && Object.keys(this.props.myTeam).length === 0) {
       return(
         <div></div>
@@ -91,9 +90,8 @@ export default class PlayerList extends React.Component {
 
       const fillers = 8-myPlayers.length;
       let disabled = true;
-      
+
       if (fillers === 0) {
-        draftPlayer = () => console.log('');
         disabled = false;
       }
 

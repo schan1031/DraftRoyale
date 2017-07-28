@@ -12,7 +12,6 @@ export default class UpcomingContest extends React.Component {
     const contest = entry.contest;
 
     const players = values(entry).slice(1);
-    console.log(players);
     const portraits = players.map(
       (player, idx) => <Portrait key={idx} player={player} />
     );

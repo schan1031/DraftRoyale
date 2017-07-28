@@ -14,11 +14,8 @@ export default class PlayerList extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log('PREVPROPS', this.props.allEntries);
-    console.log('NEXTPROPS', nextProps.allEntries);
     if (this.props.allEntries) {
       if (Object.keys(this.props.allEntries).length < Object.keys(nextProps.allEntries).length) {
-        console.log('REFETCH');
         this.props.fetchEntries();
       }
     } else {
