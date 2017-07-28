@@ -1,6 +1,6 @@
 # DraftRoyale
 
-An experience to enhance your NBA experience.
+Draft Royale is a web-app to enhance your NBA experience, written by Spencer Chan.
 
 [DraftRoyale](www.draftroyale.co 'DraftRoyale Homepage')
 
@@ -33,6 +33,13 @@ if (!this.props.loggedIn) {
 }
 ```
 
+#### Landing
+- After logging in or signing up, users are directed to a landing page.
+- The landing page gives a run down of what DraftRoyale does.
+- Links to lobby, dashboard, contest creation provided.
+
+![landing](./public/landing.png)
+
 #### Contest Creation
 
 - Users can create contests once logged in.
@@ -40,11 +47,15 @@ if (!this.props.loggedIn) {
 - Does not accept contests with past dates.
 - Defaults to current date
 
+![createform](./public/createform.png)
+
 #### Contest Lobby
 
 - Lists all contests the user is not currently entered in.
 - Backend SQL query only requests contests not entered.
 - Can enter any contests and directs to draft page for contest.
+
+![lobby](./public/lobby.png)
 
 ```
 def index
@@ -77,6 +88,9 @@ WHERE
 - Player list is generated based on only teams playing that day.
 - Players can be drafted onto user team, or dropped back into the player list.
 - User team can have a maximum of eight players, at which point the submit button becomes available.
+- Animations done with Animate CSS.
+
+![draft](./public/draftpage.png)
 
 #### Dashboard
 
@@ -84,3 +98,18 @@ WHERE
 - Based on date, contests are distributed into past or upcoming
 - Entries are searched based on current user entries.
 - SQL modification on the index route of Entries provides only entered contests by the current user.
+
+![draft](./public/dashboard.png)
+
+## Future Plans
+
+### Frontend
+
+- Graphs representing the users contests entered over time
+- Profile information, tracking points
+- Live updating scoreboard for current events
+
+### Backend
+
+- System for automatically updating database with real information
+- Form of calculating the results of contests in real time
