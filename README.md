@@ -132,3 +132,8 @@ end
 
 - System for automatically updating database with real information
 - Form of calculating the results of contests in real time
+
+## Notes
+
+- All data was taken from [basketball reference](https://www.basketball-reference.com/), using the provided csv files.
+- CSV was parsed using a ruby file created to format the data into proper format for seeding.
