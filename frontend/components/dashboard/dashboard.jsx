@@ -37,66 +37,73 @@ export default class PlayerList extends React.Component {
 
   render() {
 
-    const entries = values(this.props.allEntries);
-    const upcoming = [];
-    const past = [];
-    const today = new Date();
+    if (this.props.allEntries) {
+      const entries = values(this.props.allEntries);
+      const upcoming = [];
+      const past = [];
+      const today = new Date();
 
-    entries.forEach((entry) => {
-      const entryDate = new Date(entry.contest.contest_date);
-      if (entryDate > today) {
-        upcoming.push(entry);
-      } else {
-        past.push(entry);
+      debugger;
+      entries.forEach((entry) => {
+        const entryDate = new Date(entry.contest.contest_date);
+        if (entryDate > today) {
+          upcoming.push(entry);
+        } else {
+          past.push(entry);
+        }
+      });
+
+      let upcomingItems = upcoming.map(
+        (entry, idx) => <UpcomingContest key={idx} entry={entry}/>
+      );
+
+      let pastItems = past.map(
+        (entry, idx) => <PastContest key={idx} entry={entry}/>
+      );
+
+      if (!this.props.loggedIn) {
+        return <Redirect to='/' />;
       }
-    });
 
-    let upcomingItems = upcoming.map(
-      (entry, idx) => <UpcomingContest key={idx} entry={entry}/>
-    );
+      if (upcomingItems.length === 0) {
+        upcomingItems = this.noUpcoming();
+      }
 
-    let pastItems = past.map(
-      (entry, idx) => <PastContest key={idx} entry={entry}/>
-    );
+      if (pastItems.length === 0) {
+        pastItems = this.noPast();
+      }
 
-    if (!this.props.loggedIn) {
-      return <Redirect to='/' />;
-    }
+      return (
+        <div className='dashboard animated fadeIn'>
 
-    if (upcomingItems.length === 0) {
-      upcomingItems = this.noUpcoming();
-    }
+          <div className='upcoming'>
+            <ul>
+              <li className='dashboard-title'>
+                Upcoming
+              </li>
+              <div className='up-items'>
+                {upcomingItems}
+              </div>
+            </ul>
+          </div>
 
-    if (pastItems.length === 0) {
-      pastItems = this.noPast();
-    }
+          <div className='past'>
+            <ul>
+              <li className='dashboard-title'>
+                Past
+              </li>
+              <div className='past-items'>
+                {pastItems}
+              </div>
+            </ul>
+          </div>
 
-    return (
-      <div className='dashboard animated fadeIn'>
-
-        <div className='upcoming'>
-          <ul>
-            <li className='dashboard-title'>
-              Upcoming
-            </li>
-            <div className='up-items'>
-              {upcomingItems}
-            </div>
-          </ul>
         </div>
-
-        <div className='past'>
-          <ul>
-            <li className='dashboard-title'>
-              Past
-            </li>
-            <div className='past-items'>
-              {pastItems}
-            </div>
-          </ul>
-        </div>
-
-      </div>
-    );
+      );
+    } else {
+      return(
+        <div></div>
+      );
+    }
   }
 }
