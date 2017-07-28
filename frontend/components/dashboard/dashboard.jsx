@@ -43,7 +43,6 @@ export default class PlayerList extends React.Component {
       const past = [];
       const today = new Date();
 
-      debugger;
       entries.forEach((entry) => {
         const entryDate = new Date(entry.contest.contest_date);
         if (entryDate > today) {
