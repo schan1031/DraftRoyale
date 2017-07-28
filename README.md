@@ -1,8 +1,9 @@
 # DraftRoyale
 
-Draft Royale is a web-app to enhance your NBA experience, written by Spencer Chan.
-
 [DraftRoyale](www.draftroyale.co 'DraftRoyale Homepage')
+
+Draft Royale is a web-app inspired by daily fantasy games, such as [DraftKings](https://www.draftkings.com/). DraftRoyale requires no real money to play, and is meant solely to enhance your NBA experience.
+
 
 ## Features
 
@@ -14,7 +15,7 @@ Draft Royale is a web-app to enhance your NBA experience, written by Spencer Cha
 
 ## Project Design
 
-DraftRoyale was designed and built in two weeks, based off the concept of Daily Fantasy games, without the gambling risk.
+DraftRoyale was designed and built in two weeks, based off the concept of Daily Fantasy games, without the gambling risk. View the original proposal at [DraftRoyale Proposal](https://github.com/schan1031/DraftRoyale/tree/master/docs)
 
 ### Implementation
 
@@ -38,7 +39,7 @@ if (!this.props.loggedIn) {
 - The landing page gives a run down of what DraftRoyale does.
 - Links to lobby, dashboard, contest creation provided.
 
-![landing](./public/landing.png)
+![landing](./public/loginlanding.gif)
 
 #### Contest Creation
 
@@ -47,7 +48,7 @@ if (!this.props.loggedIn) {
 - Does not accept contests with past dates.
 - Defaults to current date
 
-![createform](./public/createform.png)
+![createform](./public/createcontest.gif)
 
 #### Contest Lobby
 
@@ -55,7 +56,7 @@ if (!this.props.loggedIn) {
 - Backend SQL query only requests contests not entered.
 - Can enter any contests and directs to draft page for contest.
 
-![lobby](./public/lobby.png)
+![lobby](./public/lobbyentry.gif)
 
 ```
 def index
@@ -90,7 +91,7 @@ WHERE
 - User team can have a maximum of eight players, at which point the submit button becomes available.
 - Animations done with Animate CSS.
 
-![draft](./public/draftpage.png)
+![draft](./public/croppeddraft.gif)
 
 #### Dashboard
 
