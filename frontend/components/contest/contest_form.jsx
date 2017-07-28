@@ -108,10 +108,3 @@ export default class ContestForm extends React.Component {
     );
   }
 }
-
-// <SingleDatePicker
-//   date={this.state.contest_date} // momentPropTypes.momentObj or null
-//   onDateChange={contest_date => this.setState({ contest_date })} // PropTypes.func.isRequired
-//   focused={this.state.focused} // PropTypes.bool
-//   onFocusChange={({ focused }) => this.setState({ focused })} // PropTypes.func.isRequired
-// />

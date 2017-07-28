@@ -13,11 +13,6 @@ export const receiveEntry = entry => ({
   entry
 });
 
-// export const receivePlayer = player => ({
-//   type: RECEIVE_PLAYER,
-//   player
-// });
-
 export const fetchEntries = entries => dispatch => (
   APIUtil.getEntries().then(
     fetchedEntries => dispatch(receiveEntries(fetchedEntries))

@@ -48,13 +48,11 @@
   background-color: rgba(0,0,0,0.2);
   border: 2px grey solid;
   color: darkgrey;
-  cursor: not-allowed;
 }
 
 .contest-form-error {
   text-align: center;
   height: 32px;
-  /*padding-bottom: 15px;*/
 }
 
 .contest-input-field {
@@ -65,14 +63,3 @@
   height: 50px;
   width: 200px;
 }
-/*
-.DateInput {
-  background: transparent !important;
-  width: 200px;
-}
-
-.SingleDatePickerInput {
-  background: transparent !important;
-  border: none !important;
-  width: 200px;
-}*/

@@ -16,21 +16,4 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store}/>, root);
-
-
-  // TESTING
-  const testcon = {creator_id: 1,
-    max_contestants: 10,
-    point_value: 50,
-    name: 'New Jam',
-    contest_date: new Date(2017, 8, 8)
-  };
-
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
-
-  window.fetchAllContests = fetchAllContests;
-  window.submitContest = submitContest;
-  window.testcon = testcon;
-  window.fetchPlayers = fetchPlayers;
 });
