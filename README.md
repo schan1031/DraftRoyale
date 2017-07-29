@@ -24,7 +24,7 @@ DraftRoyale was designed and built in two weeks, based off the concept of Daily 
 - Attempting to manually go to other pages will redirect to homepage if not logged in
 - Accomplished using `Redirect` from `react-router-dom`, checking the current session for a logged in User
 
-```
+```javascript
 import { Redirect } from 'react-router-dom';
 
 ...
@@ -58,7 +58,7 @@ if (!this.props.loggedIn) {
 
 ![lobby](./public/lobbyentry.gif)
 
-```
+```ruby
 def index
   ids = []
   current_user.entered_contests.each do |contest|
@@ -74,7 +74,7 @@ end
 ```
 The above code is a modified return on the `GET` index route to `api/contests` to perform the equivalent query:
 
-```
+```SQL
 SELECT
   *
 FROM
@@ -102,7 +102,7 @@ WHERE
 
 The Contest entered and the players drafted are pulled through the database using associations in our JBuilder view, allowing for one API request to pull the information of three separate requests.
 
-```
+```ruby
 @entries.each do |entry|
   json.set! entry.id do
     json.contest entry.contest, :name, :point_value, :max_contestants, :contest_date, :status
